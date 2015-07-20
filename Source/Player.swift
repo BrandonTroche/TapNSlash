@@ -9,5 +9,14 @@
 import Foundation
 
 class Player: CCSprite {
-   
+    
+    
+    
+    func tap() {
+        
+        self.animationManager.runAnimationsForSequenceNamed("Tap")
+
+    
+    }
+    
 }
