@@ -49,7 +49,7 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>healthBar</string>
+				<string>HealthBar</string>
 				<key>memberVarAssignmentName</key>
 				<string>healthBar</string>
 				<key>memberVarAssignmentType</key>
@@ -85,8 +85,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.10400602966547012</real>
-							<real>0.085465602576732635</real>
+							<real>0.10400000214576721</real>
+							<real>0.085000000894069672</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -111,7 +111,7 @@
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string>WalkerGoblin</string>
+		<string>RunnerGoblin</string>
 		<key>displayName</key>
 		<string>CCSprite</string>
 		<key>memberVarAssignmentName</key>
@@ -131,7 +131,7 @@
 			<key>collisionMask</key>
 			<array/>
 			<key>collisionType</key>
-			<string>enemy</string>
+			<string>enemyR</string>
 			<key>cornerRadius</key>
 			<real>0.0</real>
 			<key>density</key>
@@ -260,9 +260,9 @@
 				<string>Color3</string>
 				<key>value</key>
 				<array>
-					<real>0.22745099663734436</real>
-					<real>0.97647064924240112</real>
-					<real>0.015686275437474251</real>
+					<real>0.019607843831181526</real>
+					<real>0.0078431377187371254</real>
+					<real>0.0039215688593685627</real>
 					<real>1</real>
 				</array>
 			</dict>
@@ -276,8 +276,6 @@
 			</dict>
 		</array>
 		<key>selected</key>
-		<true/>
-		<key>seqExpanded</key>
 		<true/>
 	</dict>
 	<key>notes</key>
@@ -328,7 +326,7 @@
 			<key>chainedSequenceId</key>
 			<integer>-1</integer>
 			<key>length</key>
-			<real>1</real>
+			<real>10</real>
 			<key>name</key>
 			<string>Default Timeline</string>
 			<key>offset</key>
@@ -341,42 +339,6 @@
 			<real>128</real>
 			<key>sequenceId</key>
 			<integer>0</integer>
-			<key>soundChannel</key>
-			<dict>
-				<key>isExpanded</key>
-				<false/>
-				<key>keyframes</key>
-				<array/>
-				<key>type</key>
-				<integer>11</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>autoPlay</key>
-			<false/>
-			<key>callbackChannel</key>
-			<dict>
-				<key>keyframes</key>
-				<array/>
-				<key>type</key>
-				<integer>12</integer>
-			</dict>
-			<key>chainedSequenceId</key>
-			<integer>-1</integer>
-			<key>length</key>
-			<real>10</real>
-			<key>name</key>
-			<string>Knockback</string>
-			<key>offset</key>
-			<real>0.0</real>
-			<key>position</key>
-			<real>0.0</real>
-			<key>resolution</key>
-			<real>30</real>
-			<key>scale</key>
-			<real>128</real>
-			<key>sequenceId</key>
-			<integer>1</integer>
 			<key>soundChannel</key>
 			<dict>
 				<key>isExpanded</key>

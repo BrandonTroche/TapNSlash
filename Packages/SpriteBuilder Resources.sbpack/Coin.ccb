@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>2</integer>
+	<integer>1</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -38,80 +38,9 @@
 		<key>baseClass</key>
 		<string>CCSprite</string>
 		<key>children</key>
-		<array>
-			<dict>
-				<key>UUID</key>
-				<integer>1</integer>
-				<key>baseClass</key>
-				<string>CCBFile</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>healthBar</string>
-				<key>memberVarAssignmentName</key>
-				<string>healthBar</string>
-				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>name</string>
-						<key>type</key>
-						<string>StringSimple</string>
-						<key>value</key>
-						<string></string>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>0.0</real>
-							<real>24</real>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>0.10400602966547012</real>
-							<real>0.085465602576732635</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>rotation</string>
-						<key>type</key>
-						<string>Degrees</string>
-						<key>value</key>
-						<real>180</real>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ccbFile</string>
-						<key>type</key>
-						<string>CCBFile</string>
-						<key>value</key>
-						<string>HealthBar.ccb</string>
-					</dict>
-				</array>
-			</dict>
-		</array>
+		<array/>
 		<key>customClass</key>
-		<string>WalkerGoblin</string>
+		<string>Coin</string>
 		<key>displayName</key>
 		<string>CCSprite</string>
 		<key>memberVarAssignmentName</key>
@@ -121,7 +50,7 @@
 		<key>physicsBody</key>
 		<dict>
 			<key>affectedByGravity</key>
-			<false/>
+			<true/>
 			<key>allowsRotation</key>
 			<true/>
 			<key>bodyShape</key>
@@ -131,54 +60,142 @@
 			<key>collisionMask</key>
 			<array/>
 			<key>collisionType</key>
-			<string>enemy</string>
+			<string></string>
 			<key>cornerRadius</key>
 			<real>0.0</real>
 			<key>density</key>
-			<real>1</real>
+			<real>0.0</real>
 			<key>dynamic</key>
-			<true/>
+			<false/>
 			<key>elasticity</key>
-			<real>0.30000001192092896</real>
+			<real>0.0</real>
 			<key>friction</key>
-			<real>0.30000001192092896</real>
+			<real>0.0</real>
 			<key>points</key>
 			<array>
 				<array>
-					<real>0.0</real>
-					<real>0.0</real>
+					<real>31.603076934814453</real>
+					<real>1.2344086170196533</real>
 				</array>
 				<array>
-					<real>0.0</real>
-					<real>24</real>
+					<real>14.07366943359375</real>
+					<real>14.319113731384277</real>
 				</array>
 				<array>
-					<real>24</real>
-					<real>24</real>
+					<real>2.9216625690460205</real>
+					<real>34.305961608886719</real>
 				</array>
 				<array>
-					<real>24</real>
-					<real>0.0</real>
+					<real>0.64086538553237915</real>
+					<real>53.422576904296875</real>
+				</array>
+				<array>
+					<real>1.5162966251373291</real>
+					<real>77.498245239257812</real>
+				</array>
+				<array>
+					<real>9.6575479507446289</real>
+					<real>100.56597900390625</real>
+				</array>
+				<array>
+					<real>26.667409896850586</real>
+					<real>116.62507629394531</real>
+				</array>
+				<array>
+					<real>47.607624053955078</real>
+					<real>121.42046356201172</real>
+				</array>
+				<array>
+					<real>71.5482177734375</real>
+					<real>116.10813140869141</real>
+				</array>
+				<array>
+					<real>86.129219055175781</real>
+					<real>102.76364898681641</real>
+				</array>
+				<array>
+					<real>95.951194763183594</real>
+					<real>79.145195007324219</real>
+				</array>
+				<array>
+					<real>98.751533508300781</real>
+					<real>58.093284606933594</real>
+				</array>
+				<array>
+					<real>94.187339782714844</real>
+					<real>30.398992538452148</real>
+				</array>
+				<array>
+					<real>78.44256591796875</real>
+					<real>8.9418401718139648</real>
+				</array>
+				<array>
+					<real>58.689491271972656</real>
+					<real>-0.038473635911941528</real>
 				</array>
 			</array>
 			<key>polygons</key>
 			<array>
 				<array>
 					<array>
-						<real>24</real>
-						<real>0.0</real>
+						<real>58.689491271972656</real>
+						<real>-0.038473635911941528</real>
 					</array>
 					<array>
-						<real>24</real>
-						<real>24</real>
+						<real>78.44256591796875</real>
+						<real>8.9418401718139648</real>
 					</array>
 					<array>
-						<real>0.0</real>
-						<real>24</real>
+						<real>94.187339782714844</real>
+						<real>30.398992538452148</real>
 					</array>
 					<array>
-						<real>0.0</real>
-						<real>0.0</real>
+						<real>98.751533508300781</real>
+						<real>58.093284606933594</real>
+					</array>
+					<array>
+						<real>95.951194763183594</real>
+						<real>79.145195007324219</real>
+					</array>
+					<array>
+						<real>86.129219055175781</real>
+						<real>102.76364898681641</real>
+					</array>
+					<array>
+						<real>71.5482177734375</real>
+						<real>116.10813140869141</real>
+					</array>
+					<array>
+						<real>47.607624053955078</real>
+						<real>121.42046356201172</real>
+					</array>
+					<array>
+						<real>26.667409896850586</real>
+						<real>116.62507629394531</real>
+					</array>
+					<array>
+						<real>9.6575479507446289</real>
+						<real>100.56597900390625</real>
+					</array>
+					<array>
+						<real>1.5162966251373291</real>
+						<real>77.498245239257812</real>
+					</array>
+					<array>
+						<real>0.64086538553237915</real>
+						<real>53.422576904296875</real>
+					</array>
+					<array>
+						<real>2.9216625690460205</real>
+						<real>34.305961608886719</real>
+					</array>
+					<array>
+						<real>14.07366943359375</real>
+						<real>14.319113731384277</real>
+					</array>
+					<array>
+						<real>31.603076934814453</real>
+						<real>1.2344086170196533</real>
 					</array>
 				</array>
 			</array>
@@ -239,7 +256,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>ccbResources/ccbButtonNormal.png</string>
+					<string>Assets/spinning coin-2@4x.png</string>
 				</array>
 			</dict>
 			<dict>
@@ -260,9 +277,9 @@
 				<string>Color3</string>
 				<key>value</key>
 				<array>
-					<real>0.22745099663734436</real>
-					<real>0.97647064924240112</real>
-					<real>0.015686275437474251</real>
+					<real>0.98823535442352295</real>
+					<real>0.96862751245498657</real>
+					<real>0.9647059440612793</real>
 					<real>1</real>
 				</array>
 			</dict>
@@ -276,8 +293,6 @@
 			</dict>
 		</array>
 		<key>selected</key>
-		<true/>
-		<key>seqExpanded</key>
 		<true/>
 	</dict>
 	<key>notes</key>
@@ -328,7 +343,7 @@
 			<key>chainedSequenceId</key>
 			<integer>-1</integer>
 			<key>length</key>
-			<real>1</real>
+			<real>10</real>
 			<key>name</key>
 			<string>Default Timeline</string>
 			<key>offset</key>
@@ -341,42 +356,6 @@
 			<real>128</real>
 			<key>sequenceId</key>
 			<integer>0</integer>
-			<key>soundChannel</key>
-			<dict>
-				<key>isExpanded</key>
-				<false/>
-				<key>keyframes</key>
-				<array/>
-				<key>type</key>
-				<integer>11</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>autoPlay</key>
-			<false/>
-			<key>callbackChannel</key>
-			<dict>
-				<key>keyframes</key>
-				<array/>
-				<key>type</key>
-				<integer>12</integer>
-			</dict>
-			<key>chainedSequenceId</key>
-			<integer>-1</integer>
-			<key>length</key>
-			<real>10</real>
-			<key>name</key>
-			<string>Knockback</string>
-			<key>offset</key>
-			<real>0.0</real>
-			<key>position</key>
-			<real>0.0</real>
-			<key>resolution</key>
-			<real>30</real>
-			<key>scale</key>
-			<real>128</real>
-			<key>sequenceId</key>
-			<integer>1</integer>
 			<key>soundChannel</key>
 			<dict>
 				<key>isExpanded</key>

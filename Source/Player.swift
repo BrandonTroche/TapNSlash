@@ -16,7 +16,6 @@ class Player: CCSprite {
         
         self.animationManager.runAnimationsForSequenceNamed("Tap")
 
-    
     }
     
 }

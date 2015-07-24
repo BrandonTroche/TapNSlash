@@ -12,6 +12,8 @@
 		49D7463B1B543B8E0064DAB4 /* WalkerGoblin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D7463A1B543B8E0064DAB4 /* WalkerGoblin.swift */; };
 		49D746431B5557900064DAB4 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D746421B5557900064DAB4 /* CoreMotion.framework */; };
 		49D7464B1B557A160064DAB4 /* Level1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D7464A1B557A160064DAB4 /* Level1.swift */; };
+		49DD33E41B5FDA3D009FE6F8 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD33E31B5FDA3D009FE6F8 /* Coin.swift */; };
+		49DD33EA1B6007C0009FE6F8 /* RunnerGoblin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD33E91B6007C0009FE6F8 /* RunnerGoblin.swift */; };
 		5B121030197484FA004C1E1D /* TapNSlashActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B12102F197484FA004C1E1D /* TapNSlashActivity.m */; };
 		5B121038197487F2004C1E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B737893E1807617C0076A88C /* AppDelegate.m */; };
 		7A046D7919E84ED5004C4763 /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A046D7519E84C36004C4763 /* MainScene.swift */; };
@@ -158,6 +160,8 @@
 		49D7463A1B543B8E0064DAB4 /* WalkerGoblin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalkerGoblin.swift; path = Source/WalkerGoblin.swift; sourceTree = "<group>"; };
 		49D746421B5557900064DAB4 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		49D7464A1B557A160064DAB4 /* Level1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Level1.swift; path = Source/Level1.swift; sourceTree = "<group>"; };
+		49DD33E31B5FDA3D009FE6F8 /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coin.swift; path = Source/Coin.swift; sourceTree = "<group>"; };
+		49DD33E91B6007C0009FE6F8 /* RunnerGoblin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RunnerGoblin.swift; path = Source/RunnerGoblin.swift; sourceTree = "<group>"; };
 		5B12100919748273004C1E1D /* libEGL.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEGL.so; path = /usr/lib/armv7a/libEGL.so; sourceTree = SDKROOT; };
 		5B12100F197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 		5B121011197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
@@ -448,6 +452,8 @@
 				7A40362019DDEF0D007B6E8F /* Platforms */,
 				7A046D7519E84C36004C4763 /* MainScene.swift */,
 				49D746321B5433EF0064DAB4 /* Gameplay.swift */,
+				49DD33E91B6007C0009FE6F8 /* RunnerGoblin.swift */,
+				49DD33E31B5FDA3D009FE6F8 /* Coin.swift */,
 				49D7464A1B557A160064DAB4 /* Level1.swift */,
 				49D746381B5434170064DAB4 /* Player.swift */,
 				49D7463A1B543B8E0064DAB4 /* WalkerGoblin.swift */,
@@ -829,11 +835,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				49D7464B1B557A160064DAB4 /* Level1.swift in Sources */,
+				49DD33EA1B6007C0009FE6F8 /* RunnerGoblin.swift in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				49D746331B5433EF0064DAB4 /* Gameplay.swift in Sources */,
 				49D7463B1B543B8E0064DAB4 /* WalkerGoblin.swift in Sources */,
 				7A046D7919E84ED5004C4763 /* MainScene.swift in Sources */,
 				49D746391B5434170064DAB4 /* Player.swift in Sources */,
+				49DD33E41B5FDA3D009FE6F8 /* Coin.swift in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

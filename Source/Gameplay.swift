@@ -19,6 +19,8 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     weak var restartButton: CCButton!
     weak var experience: CCNode!
     weak var health: CCNode!
+    weak var playerLevel: CCLabelTTF!
+    weak var numCoins: CCLabelTTF!
     
     var currentMaxAccelX: Double = 0.0
     var currentMaxAccelY: Double = 0.0
@@ -27,12 +29,17 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     var currentMaxRotY: Double = 0.0
     var currentMaxRotZ: Double = 0.0
     
-    
-    
     var motionManager = CMMotionManager()
+    var curLvlPlyr:NSInteger = 1
+    var curNumCoins: Int = 0 {
+        didSet{
+            numCoins.string = "\(curNumCoins)"
+        }
+    }
+    
     let damageDone:Float = 0.05
     let damageReceived: Float = 0.1378
-
+    let expGain: Float = 0.1146
     
     func resetMaxValues(){
         
@@ -73,6 +80,8 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         var storeZ: Double
         
         storeZ = motionBegan()
+        
+        experience.scaleX = 0.0
     }
 
 //    override func onEnter() {
@@ -82,11 +91,19 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     
     override func update(delta: CCTime) {
         
-        if arc4random_uniform(100) < 3 {
+        if arc4random_uniform(100) < 5 {
             spawnGoblin()
         }
         
         
+        if arc4random_uniform(100) < 1 {
+            spawnQuickie()
+        }
+        
+        
+        
+//        numCoins.string = String(GameState.sharedInstance.score)
+
     }
     
     func restart() {
@@ -106,21 +123,72 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, enemy: WalkerGoblin!, hero: CCSprite!) -> Bool{
         
-//        let damage = enemy.healthBar.scaleX / 2
+        var enemyPositionX: CGFloat
+        var enemyPositionY: CGFloat
         
         
         enemy.healthBar.scaleX -= damageDone
+//        enemy.physicsBody.applyImpulse(ccp(0, 400))
+
         
         if enemy.healthBar.scaleX < 0 {
+            enemyPositionX = enemy.position.x
+            enemyPositionY = enemy.position.y
             
             enemy.removeFromParent()
+            
+
+            
+            spawnCoin(enemyPositionX, Y:enemyPositionY)
+            
             experience.visible = true
-            experience.scaleX += Float(0.2)
+            experience.scaleX = clampf(experience.scaleX + expGain, 0, 0.573)
+            if experience.scaleX > 0.5 {
+                experience.scaleX = 0.0
+                curLvlPlyr++
+                playerLevel.string = String(curLvlPlyr)
+            }
+            
             
         }
         
         return true
         
+    }
+    
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, enemyR: RunnerGoblin!, hero: CCSprite!) -> Bool {
+        var enemyPositionX: CGFloat
+        var enemyPositionY: CGFloat
+        
+        
+        enemyR.healthBar.scaleX -= damageDone * 5
+        
+        
+        if enemyR.healthBar.scaleX < 0 {
+            
+            enemyPositionX = enemyR.position.x
+            enemyPositionY = enemyR.position.y
+            
+            enemyR.removeFromParent()
+            
+            
+            
+            spawnCoin(enemyPositionX, Y:enemyPositionY)
+            
+            experience.visible = true
+            experience.scaleX = clampf(experience.scaleX + expGain/5, 0, 0.573)
+            
+            if experience.scaleX > 0.5 {
+                experience.scaleX = 0.0
+                curLvlPlyr++
+                playerLevel.string = String(curLvlPlyr)
+            }
+            
+            
+        }
+
+        return true
+    
     }
     
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, enemy: WalkerGoblin!, boundary: CCNode!) -> Bool {
@@ -138,7 +206,7 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     func gameOver(){
         restartButton.visible = true
     }
-    
+
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!){
         animationManager.runAnimationsForSequenceNamed("Tap")
     }
@@ -154,4 +222,44 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         aGoblin.position = ccp(randNumberX, randNumberY)
         
     }
+    
+    func spawnQuickie(){
+        var aQuickie = CCBReader.load("RunnerGoblin") as! RunnerGoblin
+        
+        gamePhysicsNode.addChild(aQuickie)
+        
+        let randNumberX = CGFloat(arc4random_uniform(100)) + CGFloat(100)
+        let randNumberY = CGFloat(arc4random_uniform(200)) + CGFloat(600)
+        
+        aQuickie.position = ccp(randNumberX, randNumberY)
+    }
+    
+    func spawnCoin(var X: CGFloat, var Y:CGFloat){
+        var coinImage = CCBReader.load("Coin") as! Coin
+        
+        coinImage.scaleX = 0.183
+        coinImage.scaleY = 0.156
+        
+        self.addChild(coinImage)
+        
+        coinImage.position.x = X
+        coinImage.position.y = Y
+        
+        coinImage.delegate = self
+        
+        coinImage.color.UIColor
+        
+    }
 }
+
+extension Gameplay: CoinDelegate{
+    
+    func coinUp(coinValue: Int) {
+        
+        curNumCoins += coinValue
+        
+    }
+    
+}
+
+
