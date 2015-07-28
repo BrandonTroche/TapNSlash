@@ -18,4 +18,8 @@ class Player: CCSprite {
 
     }
     
+    func specialMove(){
+        self.animationManager.runAnimationsForSequenceNamed("Special Attack")
+    }
+    
 }

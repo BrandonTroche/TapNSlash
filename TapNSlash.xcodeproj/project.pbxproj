@@ -14,6 +14,8 @@
 		49D7464B1B557A160064DAB4 /* Level1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D7464A1B557A160064DAB4 /* Level1.swift */; };
 		49DD33E41B5FDA3D009FE6F8 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD33E31B5FDA3D009FE6F8 /* Coin.swift */; };
 		49DD33EA1B6007C0009FE6F8 /* RunnerGoblin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD33E91B6007C0009FE6F8 /* RunnerGoblin.swift */; };
+		49DD34081B66AA3F009FE6F8 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD34071B66AA3F009FE6F8 /* Level.swift */; };
+		49DD340C1B66B138009FE6F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49DD340B1B66B138009FE6F8 /* Images.xcassets */; };
 		5B121030197484FA004C1E1D /* TapNSlashActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B12102F197484FA004C1E1D /* TapNSlashActivity.m */; };
 		5B121038197487F2004C1E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B737893E1807617C0076A88C /* AppDelegate.m */; };
 		7A046D7919E84ED5004C4763 /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A046D7519E84C36004C4763 /* MainScene.swift */; };
@@ -162,6 +164,8 @@
 		49D7464A1B557A160064DAB4 /* Level1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Level1.swift; path = Source/Level1.swift; sourceTree = "<group>"; };
 		49DD33E31B5FDA3D009FE6F8 /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coin.swift; path = Source/Coin.swift; sourceTree = "<group>"; };
 		49DD33E91B6007C0009FE6F8 /* RunnerGoblin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RunnerGoblin.swift; path = Source/RunnerGoblin.swift; sourceTree = "<group>"; };
+		49DD34071B66AA3F009FE6F8 /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Level.swift; path = Source/Level.swift; sourceTree = "<group>"; };
+		49DD340B1B66B138009FE6F8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Source/libs/cocos2d-iphone/external/SSZipArchive/Images.xcassets"; sourceTree = "<group>"; };
 		5B12100919748273004C1E1D /* libEGL.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEGL.so; path = /usr/lib/armv7a/libEGL.so; sourceTree = SDKROOT; };
 		5B12100F197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 		5B121011197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
@@ -457,6 +461,7 @@
 				49D7464A1B557A160064DAB4 /* Level1.swift */,
 				49D746381B5434170064DAB4 /* Player.swift */,
 				49D7463A1B543B8E0064DAB4 /* WalkerGoblin.swift */,
+				49DD34071B66AA3F009FE6F8 /* Level.swift */,
 				D352B48019EC608A00829775 /* MetalShaders */,
 			);
 			name = Source;
@@ -486,6 +491,7 @@
 		B77F1B2517B978D7009739AE = {
 			isa = PBXGroup;
 			children = (
+				49DD340B1B66B138009FE6F8 /* Images.xcassets */,
 				B737893C1807616C0076A88C /* Source */,
 				B77F1B4617B978D7009739AE /* Resources */,
 				9222E2B918734FF800A246C7 /* libs */,
@@ -631,6 +637,7 @@
 						CreatedOnToolsVersion = 6.0.1;
 					};
 					B77F1B2D17B978D7009739AE = {
+						DevelopmentTeam = 43L7XTF37H;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 0;
@@ -747,6 +754,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B71F5919188484E7003F4D28 /* Settings.png in Resources */,
+				49DD340C1B66B138009FE6F8 /* Images.xcassets in Resources */,
 				B7378978180762440076A88C /* Default@2x.png in Resources */,
 				B71F5914188484E7003F4D28 /* iPad@2x.png in Resources */,
 				B71F5913188484E7003F4D28 /* iPad.png in Resources */,
@@ -842,6 +850,7 @@
 				7A046D7919E84ED5004C4763 /* MainScene.swift in Sources */,
 				49D746391B5434170064DAB4 /* Player.swift in Sources */,
 				49DD33E41B5FDA3D009FE6F8 /* Coin.swift in Sources */,
+				49DD34081B66AA3F009FE6F8 /* Level.swift in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1123,6 +1132,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1158,6 +1169,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

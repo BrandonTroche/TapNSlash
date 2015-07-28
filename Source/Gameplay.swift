@@ -37,7 +37,7 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         }
     }
     
-    let damageDone:Float = 0.05
+    let damageDone:Float = 0.054
     let damageReceived: Float = 0.1378
     let expGain: Float = 0.1146
     
@@ -82,6 +82,10 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         storeZ = motionBegan()
         
         experience.scaleX = 0.0
+        
+        var level = CCBReader.load("Levels/Level1") as! Level1
+        level.delegate = self
+        currentLevel.addChild(level)
     }
 
 //    override func onEnter() {
@@ -111,6 +115,10 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         CCDirector.sharedDirector().presentScene(scene)
     }
     
+    func special() {
+        animationManager.runAnimationsForSequenceNamed("Special Attack")
+    }
+    
     func motionBegan() -> Double {
         if motionManager.accelerometerActive {
         var zScope = self.motionManager.accelerometerData.acceleration.z
@@ -121,13 +129,14 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     }
     
     
-    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, enemy: WalkerGoblin!, hero: CCSprite!) -> Bool{
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, enemy: WalkerGoblin!, hero: CCSprite!) -> ObjCBool{
         
         var enemyPositionX: CGFloat
         var enemyPositionY: CGFloat
         
         
-        enemy.healthBar.scaleX -= damageDone
+        enemy.healthBar.scaleX -= damageDone ?? 0
+        
 //        enemy.physicsBody.applyImpulse(ccp(0, 400))
 
         
@@ -156,7 +165,7 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         
     }
     
-    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, enemyR: RunnerGoblin!, hero: CCSprite!) -> Bool {
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, enemyR: RunnerGoblin!, hero: CCSprite!) -> ObjCBool {
         var enemyPositionX: CGFloat
         var enemyPositionY: CGFloat
         
@@ -191,7 +200,7 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     
     }
     
-    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, enemy: WalkerGoblin!, boundary: CCNode!) -> Bool {
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, enemy: WalkerGoblin!, boundary: CCNode!) -> ObjCBool {
         enemy.removeFromParent()
         
         health.scaleX = clampf(health.scaleX - damageReceived, 0, 1)
@@ -210,6 +219,21 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!){
         animationManager.runAnimationsForSequenceNamed("Tap")
     }
+    
+    
+}
+
+extension Gameplay: CoinDelegate{
+    
+    func coinUp(coinValue: Int) {
+        
+        curNumCoins += coinValue
+        
+    }
+    
+}
+
+extension Gameplay: SpawnProtocol{
     
     func spawnGoblin(){
         var aGoblin = CCBReader.load("WalkerGoblin") as! WalkerGoblin
@@ -248,18 +272,16 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         coinImage.delegate = self
         
         coinImage.color.UIColor
-        
-    }
-}
-
-extension Gameplay: CoinDelegate{
-    
-    func coinUp(coinValue: Int) {
-        
-        curNumCoins += coinValue
-        
     }
     
 }
 
+
+
+
+protocol SpawnProtocol{
+    func spawnGoblin()
+    func spawnQuickie()
+    func spawnCoin(var X: CGFloat, var Y:CGFloat)
+}
 

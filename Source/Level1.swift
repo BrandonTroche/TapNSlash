@@ -8,14 +8,34 @@
 
 import Foundation
 
-class Level1: CCNode {
- 
-    weak var walker: CCNode!
+class Level1: CCNode{
     
-    var speed: CGFloat = 10
+    var delegate: SpawnProtocol!
+ 
+//    weak var walker: CCNode!
+//    
+//    var speed: CGFloat = 10
+    
+//    override func update(delta: CCTime) {
+//        walker.position = ccp(position.x, position.y - speed)
+//    }
     
     override func update(delta: CCTime) {
-        walker.position = ccp(position.x, position.y - speed)
+        
+        if arc4random_uniform(100) < 5 {
+            delegate.spawnGoblin()
+        }
+        
+        
+        if arc4random_uniform(100) < 1 {
+            delegate.spawnQuickie()
+        }
+        
+        
+        
+        //        numCoins.string = String(GameState.sharedInstance.score)
+        
     }
+
     
 }
