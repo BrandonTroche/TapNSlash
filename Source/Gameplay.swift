@@ -37,9 +37,19 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         }
     }
     
-    let damageDone:Float = 0.054
     let damageReceived: Float = 0.1378
-    let expGain: Float = 0.1146
+    
+    func damageDone() -> Double {
+        
+        return 0.054 + ((Double(curLvlPlyr) * 0.054)/4)
+        
+    }
+    
+    func expGain() -> Double{
+        
+        return 0.1146/Double(curLvlPlyr)
+        
+    }
     
     func resetMaxValues(){
         
@@ -71,21 +81,26 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
 //        for i in 0...100 {
 //            spawnGoblin()
 //        }
+//        motionManager.startAccelerometerUpdates()
+        
+//        var storeZ: Double
+//        
+//        storeZ = motionBegan()
+        
         
         gamePhysicsNode.collisionDelegate = self
         userInteractionEnabled = true
-        
-        motionManager.startAccelerometerUpdates()
-        
-        var storeZ: Double
-        
-        storeZ = motionBegan()
         
         experience.scaleX = 0.0
         
         var level = CCBReader.load("Levels/Level1") as! Level1
         level.delegate = self
         currentLevel.addChild(level)
+        
+        var audio = OALSimpleAudio.sharedInstance()
+        
+        audio.playBg("GameScene.mp3", loop:true)
+        
     }
 
 //    override func onEnter() {
@@ -94,18 +109,15 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
 //    }
     
     override func update(delta: CCTime) {
-        
-        if arc4random_uniform(100) < 5 {
-            spawnGoblin()
-        }
-        
-        
-        if arc4random_uniform(100) < 1 {
-            spawnQuickie()
-        }
-        
-        
-        
+//        
+//        if arc4random_uniform(100) < 5 {
+//            spawnGoblin()
+//        }
+//        
+//        
+//        if arc4random_uniform(100) < 1 {
+//            spawnQuickie()
+//        }
 //        numCoins.string = String(GameState.sharedInstance.score)
 
     }
@@ -119,14 +131,14 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         animationManager.runAnimationsForSequenceNamed("Special Attack")
     }
     
-    func motionBegan() -> Double {
-        if motionManager.accelerometerActive {
-        var zScope = self.motionManager.accelerometerData.acceleration.z
-        println(zScope)
-        return zScope
-        }
-        else {return 0.0}
-    }
+//    func motionBegan() -> Double {
+//        if motionManager.accelerometerActive {
+//        var zScope = self.motionManager.accelerometerData.acceleration.z
+//        println(zScope)
+//        return zScope
+//        }
+//        else {return 0.0}
+//    }
     
     
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, enemy: WalkerGoblin!, hero: CCSprite!) -> ObjCBool{
@@ -135,7 +147,7 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         var enemyPositionY: CGFloat
         
         
-        enemy.healthBar.scaleX -= damageDone ?? 0
+        enemy.healthBar.scaleX -= Float(damageDone()) ?? 0
         
 //        enemy.physicsBody.applyImpulse(ccp(0, 400))
 
@@ -151,7 +163,7 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
             spawnCoin(enemyPositionX, Y:enemyPositionY)
             
             experience.visible = true
-            experience.scaleX = clampf(experience.scaleX + expGain, 0, 0.573)
+            experience.scaleX = clampf(experience.scaleX + Float(expGain()), 0, 0.573)
             if experience.scaleX > 0.5 {
                 experience.scaleX = 0.0
                 curLvlPlyr++
@@ -170,7 +182,7 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         var enemyPositionY: CGFloat
         
         
-        enemyR.healthBar.scaleX -= damageDone * 5
+        enemyR.healthBar.scaleX -= Float(damageDone()) * 5
         
         
         if enemyR.healthBar.scaleX < 0 {
@@ -185,7 +197,7 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
             spawnCoin(enemyPositionX, Y:enemyPositionY)
             
             experience.visible = true
-            experience.scaleX = clampf(experience.scaleX + expGain/5, 0, 0.573)
+            experience.scaleX = clampf(experience.scaleX + Float(expGain()/5), 0, 0.573)
             
             if experience.scaleX > 0.5 {
                 experience.scaleX = 0.0
@@ -279,9 +291,11 @@ extension Gameplay: SpawnProtocol{
 
 
 
-protocol SpawnProtocol{
+protocol SpawnProtocol {
+    
     func spawnGoblin()
     func spawnQuickie()
     func spawnCoin(var X: CGFloat, var Y:CGFloat)
+    
 }
 

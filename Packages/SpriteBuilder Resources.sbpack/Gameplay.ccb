@@ -10,13 +10,13 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>39</integer>
+	<integer>40</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
 	<integer>0</integer>
 	<key>currentSequenceId</key>
-	<integer>2</integer>
+	<integer>0</integer>
 	<key>docDimensionsType</key>
 	<integer>0</integer>
 	<key>fileType</key>
@@ -1248,8 +1248,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -2284,8 +2282,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>191.30000305175781</real>
-									<real>23.700000762939453</real>
+									<real>191.28565979003906</real>
+									<real>23.729524612426758</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -2312,7 +2310,7 @@
 								<key>type</key>
 								<string>Degrees</string>
 								<key>value</key>
-								<real>324</real>
+								<real>-35</real>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -2498,7 +2496,7 @@
 				<key>displayName</key>
 				<string>restartButton</string>
 				<key>memberVarAssignmentName</key>
-				<string>restartButton</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -2832,6 +2830,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -2843,9 +2843,9 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>CCButton</string>
-				<key>memberVarAssignmentName</key>
 				<string>specialButton</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>

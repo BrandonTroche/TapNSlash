@@ -8,8 +8,8 @@ class MainScene: CCNode {
     
     func play() {
         
-    let gameplayScene = CCBReader.loadAsScene("Gameplay")
-    CCDirector.sharedDirector().presentScene(gameplayScene)
+    let scene = CCBReader.loadAsScene("LevelSelect")
+    CCDirector.sharedDirector().presentScene(scene)
     
     }
     

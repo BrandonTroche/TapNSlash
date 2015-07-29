@@ -11,31 +11,48 @@ import Foundation
 class Level1: CCNode{
     
     var delegate: SpawnProtocol!
- 
-//    weak var walker: CCNode!
-//    
-//    var speed: CGFloat = 10
+    var gobCount:Int = 0
+    var qckCount:Int = 0
     
-//    override func update(delta: CCTime) {
-//        walker.position = ccp(position.x, position.y - speed)
-//    }
+    enum GameState{
+        case over, playing
+    }
+    
+    var gameState: GameState = .playing
+
     
     override func update(delta: CCTime) {
+
         
-        if arc4random_uniform(100) < 5 {
+        if arc4random_uniform(100) < 5 && gobCount != 20 {
             delegate.spawnGoblin()
+            gobCount++
         }
         
         
-        if arc4random_uniform(100) < 1 {
+        if arc4random_uniform(100) < 1 && qckCount != 5 {
             delegate.spawnQuickie()
+            qckCount++
         }
         
-        
-        
-        //        numCoins.string = String(GameState.sharedInstance.score)
+        levelFinished()
+        checkLevelOver() 
         
     }
+    
+    func checkLevelOver() -> Bool {
+        if gameState == .over {
+            return true
+        }
+        return false
+    }
 
+    func levelFinished() -> Bool {
+        if gobCount == 20 && qckCount == 5 {
+            gameState = .over
+            return true
+        }
+        return false
+    }
     
 }
