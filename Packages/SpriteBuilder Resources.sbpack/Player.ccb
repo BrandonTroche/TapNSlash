@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>6</integer>
+	<integer>9</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -74,48 +74,48 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>6.914555549621582</real>
-					<real>4.0935459136962891</real>
+					<real>7.3858752250671387</real>
+					<real>38.224208831787109</real>
 				</array>
 				<array>
-					<real>8.3257675170898438</real>
-					<real>144.101806640625</real>
+					<real>8.0197114944458008</real>
+					<real>145.52882385253906</real>
 				</array>
 				<array>
-					<real>18.217218399047852</real>
-					<real>160.53567504882812</real>
+					<real>18.805276870727539</real>
+					<real>160.94268798828125</real>
 				</array>
 				<array>
-					<real>27.678043365478516</real>
-					<real>144.99678039550781</real>
+					<real>29.158798217773438</real>
+					<real>144.40603637695312</real>
 				</array>
 				<array>
-					<real>29.146326065063477</real>
-					<real>4.0676045417785645</real>
+					<real>29.272628784179688</real>
+					<real>38.697643280029297</real>
 				</array>
 			</array>
 			<key>polygons</key>
 			<array>
 				<array>
 					<array>
-						<real>29.146326065063477</real>
-						<real>4.0676045417785645</real>
+						<real>29.272628784179688</real>
+						<real>38.697643280029297</real>
 					</array>
 					<array>
-						<real>27.678043365478516</real>
-						<real>144.99678039550781</real>
+						<real>29.158798217773438</real>
+						<real>144.40603637695312</real>
 					</array>
 					<array>
-						<real>18.217218399047852</real>
-						<real>160.53567504882812</real>
+						<real>18.805276870727539</real>
+						<real>160.94268798828125</real>
 					</array>
 					<array>
-						<real>8.3257675170898438</real>
-						<real>144.101806640625</real>
+						<real>8.0197114944458008</real>
+						<real>145.52882385253906</real>
 					</array>
 					<array>
-						<real>6.914555549621582</real>
-						<real>4.0935459136962891</real>
+						<real>7.3858752250671387</real>
+						<real>38.224208831787109</real>
 					</array>
 				</array>
 			</array>
@@ -269,7 +269,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>1</real>
+			<real>0.0</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

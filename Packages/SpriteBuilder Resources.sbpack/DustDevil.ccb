@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>7</integer>
+	<integer>4</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -71,8 +71,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.0</real>
-							<real>24</real>
+							<real>119.00000762939453</real>
+							<real>232.72665405273438</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -85,8 +85,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.10400000214576721</real>
-							<real>-0.085000000894069672</real>
+							<real>0.33577704429626465</real>
+							<real>0.25080525875091553</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -108,12 +108,10 @@
 						<string>HealthBar.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string>RunnerGoblin</string>
+		<string></string>
 		<key>displayName</key>
 		<string>CCSprite</string>
 		<key>memberVarAssignmentName</key>
@@ -133,7 +131,7 @@
 			<key>collisionMask</key>
 			<array/>
 			<key>collisionType</key>
-			<string>enemyR</string>
+			<string>dustDevil</string>
 			<key>cornerRadius</key>
 			<real>0.0</real>
 			<key>density</key>
@@ -147,40 +145,40 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>0.0</real>
-					<real>0.0</real>
+					<real>122.89044952392578</real>
+					<real>169.38525390625</real>
 				</array>
 				<array>
-					<real>0.0</real>
-					<real>24</real>
+					<real>194.970947265625</real>
+					<real>168.61668395996094</real>
 				</array>
 				<array>
-					<real>24</real>
-					<real>24</real>
+					<real>196.830078125</real>
+					<real>89.76495361328125</real>
 				</array>
 				<array>
-					<real>24</real>
-					<real>0.0</real>
+					<real>120.78526306152344</real>
+					<real>89.968498229980469</real>
 				</array>
 			</array>
 			<key>polygons</key>
 			<array>
 				<array>
 					<array>
-						<real>24</real>
-						<real>0.0</real>
+						<real>120.78526306152344</real>
+						<real>89.968498229980469</real>
 					</array>
 					<array>
-						<real>24</real>
-						<real>24</real>
+						<real>196.830078125</real>
+						<real>89.76495361328125</real>
 					</array>
 					<array>
-						<real>0.0</real>
-						<real>24</real>
+						<real>194.970947265625</real>
+						<real>168.61668395996094</real>
 					</array>
 					<array>
-						<real>0.0</real>
-						<real>0.0</real>
+						<real>122.89044952392578</real>
+						<real>169.38525390625</real>
 					</array>
 				</array>
 			</array>
@@ -241,7 +239,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>ccbResources/ccbButtonNormal.png</string>
+					<string>Assets/DustDevil.png</string>
 				</array>
 			</dict>
 			<dict>
@@ -262,9 +260,9 @@
 				<string>Color3</string>
 				<key>value</key>
 				<array>
-					<real>0.027450982481241226</real>
-					<real>0.039215687662363052</real>
-					<real>0.039215687662363052</real>
+					<real>1</real>
+					<real>1</real>
+					<real>1</real>
 					<real>1</real>
 				</array>
 			</dict>
@@ -277,6 +275,8 @@
 				<array/>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

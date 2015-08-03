@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4964EB9C1B68431E00BFBA7D /* LevelSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964EB9B1B68431E00BFBA7D /* LevelSelect.swift */; };
 		4964EBA11B684E4900BFBA7D /* GameScene.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4964EBA01B684E4900BFBA7D /* GameScene.mp3 */; };
+		4964EBA51B692BC200BFBA7D /* Shelf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964EBA41B692BC200BFBA7D /* Shelf.swift */; };
+		4964EBAD1B6953E000BFBA7D /* MotionKit in Resources */ = {isa = PBXBuildFile; fileRef = 4964EBAC1B6953E000BFBA7D /* MotionKit */; };
+		4964EBB81B69550F00BFBA7D /* MotionKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964EBB71B69550F00BFBA7D /* MotionKit.swift */; };
 		49D746331B5433EF0064DAB4 /* Gameplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D746321B5433EF0064DAB4 /* Gameplay.swift */; };
 		49D746391B5434170064DAB4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D746381B5434170064DAB4 /* Player.swift */; };
 		49D7463B1B543B8E0064DAB4 /* WalkerGoblin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D7463A1B543B8E0064DAB4 /* WalkerGoblin.swift */; };
@@ -161,6 +164,11 @@
 /* Begin PBXFileReference section */
 		4964EB9B1B68431E00BFBA7D /* LevelSelect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelSelect.swift; path = Source/LevelSelect.swift; sourceTree = "<group>"; };
 		4964EBA01B684E4900BFBA7D /* GameScene.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GameScene.mp3; sourceTree = "<group>"; };
+		4964EBA41B692BC200BFBA7D /* Shelf.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shelf.swift; sourceTree = "<group>"; };
+		4964EBAC1B6953E000BFBA7D /* MotionKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MotionKit; path = Source/Resources/MotionKit; sourceTree = "<group>"; };
+		4964EBB21B69540C00BFBA7D /* MotionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MotionKit.framework; path = "Source/Resources/MotionKit/build/Debug-iphoneos/MotionKit.framework"; sourceTree = "<group>"; };
+		4964EBB41B69541700BFBA7D /* MotionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MotionKit.framework; path = "Source/Resources/MotionKit/Example/build/Debug-iphoneos/MotionKit.framework"; sourceTree = "<group>"; };
+		4964EBB71B69550F00BFBA7D /* MotionKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MotionKit.swift; path = Source/Resources/MotionKit/MotionKit.swift; sourceTree = "<group>"; };
 		49D746321B5433EF0064DAB4 /* Gameplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gameplay.swift; path = Source/Gameplay.swift; sourceTree = "<group>"; };
 		49D746381B5434170064DAB4 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = Source/Player.swift; sourceTree = "<group>"; };
 		49D7463A1B543B8E0064DAB4 /* WalkerGoblin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalkerGoblin.swift; path = Source/WalkerGoblin.swift; sourceTree = "<group>"; };
@@ -471,10 +479,12 @@
 				49D746321B5433EF0064DAB4 /* Gameplay.swift */,
 				49DD33E91B6007C0009FE6F8 /* RunnerGoblin.swift */,
 				49DD33E31B5FDA3D009FE6F8 /* Coin.swift */,
+				4964EBA41B692BC200BFBA7D /* Shelf.swift */,
 				49D7464A1B557A160064DAB4 /* Level1.swift */,
 				49D746381B5434170064DAB4 /* Player.swift */,
 				49D7463A1B543B8E0064DAB4 /* WalkerGoblin.swift */,
 				49DD34071B66AA3F009FE6F8 /* Level.swift */,
+				4964EBB71B69550F00BFBA7D /* MotionKit.swift */,
 				D352B48019EC608A00829775 /* MetalShaders */,
 			);
 			name = Source;
@@ -511,6 +521,7 @@
 				B77F1CCF17B978D8009739AE /* Supporting Files */,
 				B77F1B3017B978D7009739AE /* Frameworks */,
 				B77F1B2F17B978D7009739AE /* Products */,
+				4964EBAC1B6953E000BFBA7D /* MotionKit */,
 			);
 			sourceTree = "<group>";
 		};
@@ -527,6 +538,8 @@
 		B77F1B3017B978D7009739AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4964EBB41B69541700BFBA7D /* MotionKit.framework */,
+				4964EBB21B69540C00BFBA7D /* MotionKit.framework */,
 				49D746421B5557900064DAB4 /* CoreMotion.framework */,
 				BC5399D31A44DCC90063F482 /* AndroidKit.framework */,
 				BC5399D41A44DCC90063F482 /* CoreJava.framework */,
@@ -776,6 +789,7 @@
 				B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */,
 				B71F5916188484E7003F4D28 /* iPhone-old@2x.png in Resources */,
 				B737893B180761570076A88C /* Published-iOS in Resources */,
+				4964EBAD1B6953E000BFBA7D /* MotionKit in Resources */,
 				B71F591A188484E7003F4D28 /* Settings@2x.png in Resources */,
 				B7378976180762440076A88C /* Default-Landscape~ipad.png in Resources */,
 				B71F5915188484E7003F4D28 /* iPhone-old.png in Resources */,
@@ -857,11 +871,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4964EBA51B692BC200BFBA7D /* Shelf.swift in Sources */,
 				49D7464B1B557A160064DAB4 /* Level1.swift in Sources */,
 				49DD33EA1B6007C0009FE6F8 /* RunnerGoblin.swift in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				49D746331B5433EF0064DAB4 /* Gameplay.swift in Sources */,
 				49D7463B1B543B8E0064DAB4 /* WalkerGoblin.swift in Sources */,
+				4964EBB81B69550F00BFBA7D /* MotionKit.swift in Sources */,
 				7A046D7919E84ED5004C4763 /* MainScene.swift in Sources */,
 				49D746391B5434170064DAB4 /* Player.swift in Sources */,
 				49DD33E41B5FDA3D009FE6F8 /* Coin.swift in Sources */,
@@ -1155,6 +1171,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Source/Resources/MotionKit/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/Resources/MotionKit/Example/build/Debug-iphoneos",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
@@ -1192,6 +1213,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Source/Resources/MotionKit/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Source/Resources/MotionKit/Example/build/Debug-iphoneos",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
 				HEADER_SEARCH_PATHS = (

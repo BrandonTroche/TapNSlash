@@ -11,6 +11,9 @@ import CoreMotion
 
 class Gameplay: CCNode, CCPhysicsCollisionDelegate {
    
+    //physicsBody.sensor = true - collection
+    
+    
     /*Load in enemies between 60% and 100%*/
     
     weak var currentLevel: CCNode!
@@ -21,13 +24,6 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     weak var health: CCNode!
     weak var playerLevel: CCLabelTTF!
     weak var numCoins: CCLabelTTF!
-    
-    var currentMaxAccelX: Double = 0.0
-    var currentMaxAccelY: Double = 0.0
-    var currentMaxAccelZ: Double = 0.0
-    var currentMaxRotX: Double = 0.0
-    var currentMaxRotY: Double = 0.0
-    var currentMaxRotZ: Double = 0.0
     
     var motionManager = CMMotionManager()
     var curLvlPlyr:NSInteger = 1
@@ -51,42 +47,30 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         
     }
     
-    func resetMaxValues(){
-        
-        currentMaxRotX = 0.0
-        currentMaxRotY = 0.0
-        currentMaxRotZ = 0.0
-        
-        currentMaxAccelX = 0.0
-        currentMaxAccelY = 0.0
-        currentMaxAccelZ = 0.0
-        
-    }
     
     func didLoadFromCCB () {
        
        // println(motionManager.accelerometerData)
-        
-      //  let lvl = CCBReader.load("Levels/Level1") as! Level1
-        
-      //  currentLevel.addChild(lvl)
-        
 //        gamePhysicsNode.debugDraw = true
-        
-//        for var i = 0; i<9; i++ {
-//            spawnGoblin()
-//        }
-        //schedule functions
-//
-//        for i in 0...100 {
-//            spawnGoblin()
-//        }
+
 //        motionManager.startAccelerometerUpdates()
         
-//        var storeZ: Double
-//        
-//        storeZ = motionBegan()
+        let motionKit = MotionKit()
         
+        motionKit.getAccelerometerValues (interval: 0.05){
+            (x, y, z) in
+
+//            println("X: \(x) Y: \(y) Z: \(z)")
+            
+//            self.xValLabel.string = "X: \(x)"
+//            self.yValLabel.string = "Y: \(y)"
+//            self.zValLabel.string = "Z: \(z)"
+
+            self.player.position.x = CGFloat(191 + (x*115))
+            
+//            println("\(self.player.position.x)")
+            
+        }
         
         gamePhysicsNode.collisionDelegate = self
         userInteractionEnabled = true
@@ -102,25 +86,6 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         audio.playBg("GameScene.mp3", loop:true)
         
     }
-
-//    override func onEnter() {
-//        super.onEnter()
-//     //   self.resetMaxValues()
-//    }
-    
-    override func update(delta: CCTime) {
-//        
-//        if arc4random_uniform(100) < 5 {
-//            spawnGoblin()
-//        }
-//        
-//        
-//        if arc4random_uniform(100) < 1 {
-//            spawnQuickie()
-//        }
-//        numCoins.string = String(GameState.sharedInstance.score)
-
-    }
     
     func restart() {
         let scene = CCBReader.loadAsScene("Gameplay")
@@ -131,21 +96,14 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         animationManager.runAnimationsForSequenceNamed("Special Attack")
     }
     
-//    func motionBegan() -> Double {
-//        if motionManager.accelerometerActive {
-//        var zScope = self.motionManager.accelerometerData.acceleration.z
-//        println(zScope)
-//        return zScope
-//        }
-//        else {return 0.0}
-//    }
-    
     
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, enemy: WalkerGoblin!, hero: CCSprite!) -> ObjCBool{
         
         var enemyPositionX: CGFloat
         var enemyPositionY: CGFloat
+        var knockBack = CCActionMoveBy(duration: 0.15, position: CGPoint(x: 0, y: 60))
         
+        enemy.runAction(knockBack) ?? 0
         
         enemy.healthBar.scaleX -= Float(damageDone()) ?? 0
         
@@ -158,10 +116,11 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
             
             enemy.removeFromParent()
             
-
-            
-            spawnCoin(enemyPositionX, Y:enemyPositionY)
-            
+            if arc4random_uniform(10) == 1 {
+                
+                spawnCoin(enemyPositionX, Y:enemyPositionY)
+                
+            }
             experience.visible = true
             experience.scaleX = clampf(experience.scaleX + Float(expGain()), 0, 0.573)
             if experience.scaleX > 0.5 {
@@ -182,7 +141,7 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         var enemyPositionY: CGFloat
         
         
-        enemyR.healthBar.scaleX -= Float(damageDone()) * 5
+        enemyR.healthBar.scaleX -= Float(damageDone()) * 5 ?? 0
         
         
         if enemyR.healthBar.scaleX < 0 {
@@ -193,8 +152,11 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
             enemyR.removeFromParent()
             
             
-            
+            if arc4random_uniform(10) < 5 {
+                
             spawnCoin(enemyPositionX, Y:enemyPositionY)
+                
+            }
             
             experience.visible = true
             experience.scaleX = clampf(experience.scaleX + Float(expGain()/5), 0, 0.573)
@@ -224,14 +186,31 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         return true
     }
     
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, enemyR: WalkerGoblin!, boundary: CCNode!) -> ObjCBool {
+        
+        enemyR.removeFromParent()
+        
+        health.scaleX = clampf(health.scaleX - damageReceived, 0, 1)
+        
+        if health.scaleX == 0 {
+            gameOver()
+        }
+        
+        return true
+    }
+    
+    
     func gameOver(){
         restartButton.visible = true
     }
 
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!){
+        
+//        player.tap()
+//      player.center()
         animationManager.runAnimationsForSequenceNamed("Tap")
-    }
     
+    }
     
 }
 
@@ -268,6 +247,8 @@ extension Gameplay: SpawnProtocol{
         let randNumberY = CGFloat(arc4random_uniform(200)) + CGFloat(600)
         
         aQuickie.position = ccp(randNumberX, randNumberY)
+//        aQuickie.scaleX = 0.25
+//        aQuickie.scaleY = 0.30
     }
     
     func spawnCoin(var X: CGFloat, var Y:CGFloat){

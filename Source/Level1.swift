@@ -36,7 +36,8 @@ class Level1: CCNode{
         }
         
         levelFinished()
-        checkLevelOver() 
+        checkLevelOver()
+        
         
     }
     

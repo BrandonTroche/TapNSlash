@@ -10,7 +10,7 @@ import Foundation
 
 class RunnerGoblin: CCSprite {
     
-    var speed: CGFloat = 10
+    var speed: CGFloat = 8
     weak var healthBar: CCSprite!
     
     func didLoadFromCCB(){

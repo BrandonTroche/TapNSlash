@@ -10,9 +10,4 @@ import Foundation
 
 class LevelSelect: CCNode {
     
-    func level1(){
-        let scene = CCBReader.loadAsScene("Gameplay")
-        CCDirector.sharedDirector().presentScene(scene)
-    }
-    
 }
