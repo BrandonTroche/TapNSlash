@@ -78,16 +78,16 @@
 					<real>38.224208831787109</real>
 				</array>
 				<array>
-					<real>8.0197114944458008</real>
-					<real>145.52882385253906</real>
+					<real>7.831627368927002</real>
+					<real>144.65415954589844</real>
 				</array>
 				<array>
-					<real>18.805276870727539</real>
-					<real>160.94268798828125</real>
+					<real>18.455224990844727</real>
+					<real>159.53706359863281</real>
 				</array>
 				<array>
-					<real>29.158798217773438</real>
-					<real>144.40603637695312</real>
+					<real>29.18140983581543</real>
+					<real>143.52700805664062</real>
 				</array>
 				<array>
 					<real>29.272628784179688</real>
@@ -102,16 +102,16 @@
 						<real>38.697643280029297</real>
 					</array>
 					<array>
-						<real>29.158798217773438</real>
-						<real>144.40603637695312</real>
+						<real>29.18140983581543</real>
+						<real>143.52700805664062</real>
 					</array>
 					<array>
-						<real>18.805276870727539</real>
-						<real>160.94268798828125</real>
+						<real>18.455224990844727</real>
+						<real>159.53706359863281</real>
 					</array>
 					<array>
-						<real>8.0197114944458008</real>
-						<real>145.52882385253906</real>
+						<real>7.831627368927002</real>
+						<real>144.65415954589844</real>
 					</array>
 					<array>
 						<real>7.3858752250671387</real>
@@ -212,6 +212,8 @@
 				<array/>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 		<key>seqExpanded</key>
 		<true/>
 	</dict>
@@ -223,25 +225,11 @@
 			<key>centeredOrigin</key>
 			<false/>
 			<key>ext</key>
-			<string>phone</string>
-			<key>height</key>
-			<integer>0</integer>
-			<key>name</key>
-			<string>Phone</string>
-			<key>scale</key>
-			<real>1</real>
-			<key>width</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>centeredOrigin</key>
-			<false/>
-			<key>ext</key>
 			<string>tablet phonehd</string>
 			<key>height</key>
 			<integer>0</integer>
 			<key>name</key>
-			<string>Tablet</string>
+			<string>Fixed</string>
 			<key>scale</key>
 			<real>2</real>
 			<key>width</key>

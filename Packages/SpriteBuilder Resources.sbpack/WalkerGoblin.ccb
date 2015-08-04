@@ -71,8 +71,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.0</real>
-							<real>24</real>
+							<real>16.732507705688477</real>
+							<real>175.14193725585938</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -85,8 +85,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.10400602966547012</real>
-							<real>0.085465602576732635</real>
+							<real>0.5</real>
+							<real>0.5</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -123,7 +123,7 @@
 			<key>affectedByGravity</key>
 			<false/>
 			<key>allowsRotation</key>
-			<true/>
+			<false/>
 			<key>bodyShape</key>
 			<integer>0</integer>
 			<key>collisionCategories</key>
@@ -135,7 +135,7 @@
 			<key>cornerRadius</key>
 			<real>0.0</real>
 			<key>density</key>
-			<real>1</real>
+			<real>0.10000000149011612</real>
 			<key>dynamic</key>
 			<true/>
 			<key>elasticity</key>
@@ -145,40 +145,40 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>0.0</real>
-					<real>0.0</real>
+					<real>2.3523075580596924</real>
+					<real>12.776806831359863</real>
 				</array>
 				<array>
-					<real>0.0</real>
-					<real>24</real>
+					<real>38.046012878417969</real>
+					<real>12.40631103515625</real>
 				</array>
 				<array>
-					<real>24</real>
-					<real>24</real>
+					<real>38.115482330322266</real>
+					<real>1.7944250106811523</real>
 				</array>
 				<array>
-					<real>24</real>
-					<real>0.0</real>
+					<real>2.5504200458526611</real>
+					<real>1.0071207284927368</real>
 				</array>
 			</array>
 			<key>polygons</key>
 			<array>
 				<array>
 					<array>
-						<real>24</real>
-						<real>0.0</real>
+						<real>2.5504200458526611</real>
+						<real>1.0071207284927368</real>
 					</array>
 					<array>
-						<real>24</real>
-						<real>24</real>
+						<real>38.115482330322266</real>
+						<real>1.7944250106811523</real>
 					</array>
 					<array>
-						<real>0.0</real>
-						<real>24</real>
+						<real>38.046012878417969</real>
+						<real>12.40631103515625</real>
 					</array>
 					<array>
-						<real>0.0</real>
-						<real>0.0</real>
+						<real>2.3523075580596924</real>
+						<real>12.776806831359863</real>
 					</array>
 				</array>
 			</array>
@@ -239,7 +239,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>ccbResources/ccbButtonNormal.png</string>
+					<string>Assets/BigFootcube@4x.png</string>
 				</array>
 			</dict>
 			<dict>
@@ -260,9 +260,9 @@
 				<string>Color3</string>
 				<key>value</key>
 				<array>
-					<real>0.22745099663734436</real>
-					<real>0.97647064924240112</real>
-					<real>0.015686275437474251</real>
+					<real>0.98431378602981567</real>
+					<real>0.95686280727386475</real>
+					<real>0.9490196704864502</real>
 					<real>1</real>
 				</array>
 			</dict>
@@ -288,25 +288,11 @@
 			<key>centeredOrigin</key>
 			<false/>
 			<key>ext</key>
-			<string>phone</string>
-			<key>height</key>
-			<integer>0</integer>
-			<key>name</key>
-			<string>Phone</string>
-			<key>scale</key>
-			<real>1</real>
-			<key>width</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>centeredOrigin</key>
-			<false/>
-			<key>ext</key>
 			<string>tablet phonehd</string>
 			<key>height</key>
 			<integer>0</integer>
 			<key>name</key>
-			<string>Tablet</string>
+			<string>Fixed</string>
 			<key>scale</key>
 			<real>2</real>
 			<key>width</key>

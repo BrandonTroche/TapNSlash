@@ -12,6 +12,8 @@
 		4964EBA51B692BC200BFBA7D /* Shelf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964EBA41B692BC200BFBA7D /* Shelf.swift */; };
 		4964EBAD1B6953E000BFBA7D /* MotionKit in Resources */ = {isa = PBXBuildFile; fileRef = 4964EBAC1B6953E000BFBA7D /* MotionKit */; };
 		4964EBB81B69550F00BFBA7D /* MotionKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964EBB71B69550F00BFBA7D /* MotionKit.swift */; };
+		4964EBBA1B70943C00BFBA7D /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964EBB91B70943C00BFBA7D /* Level.swift */; };
+		4964EBBC1B7099A800BFBA7D /* Level2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964EBBB1B7099A800BFBA7D /* Level2.swift */; };
 		49D746331B5433EF0064DAB4 /* Gameplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D746321B5433EF0064DAB4 /* Gameplay.swift */; };
 		49D746391B5434170064DAB4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D746381B5434170064DAB4 /* Player.swift */; };
 		49D7463B1B543B8E0064DAB4 /* WalkerGoblin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D7463A1B543B8E0064DAB4 /* WalkerGoblin.swift */; };
@@ -19,7 +21,6 @@
 		49D7464B1B557A160064DAB4 /* Level1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D7464A1B557A160064DAB4 /* Level1.swift */; };
 		49DD33E41B5FDA3D009FE6F8 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD33E31B5FDA3D009FE6F8 /* Coin.swift */; };
 		49DD33EA1B6007C0009FE6F8 /* RunnerGoblin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD33E91B6007C0009FE6F8 /* RunnerGoblin.swift */; };
-		49DD34081B66AA3F009FE6F8 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD34071B66AA3F009FE6F8 /* Level.swift */; };
 		49DD340C1B66B138009FE6F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49DD340B1B66B138009FE6F8 /* Images.xcassets */; };
 		5B121030197484FA004C1E1D /* TapNSlashActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B12102F197484FA004C1E1D /* TapNSlashActivity.m */; };
 		5B121038197487F2004C1E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B737893E1807617C0076A88C /* AppDelegate.m */; };
@@ -169,6 +170,8 @@
 		4964EBB21B69540C00BFBA7D /* MotionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MotionKit.framework; path = "Source/Resources/MotionKit/build/Debug-iphoneos/MotionKit.framework"; sourceTree = "<group>"; };
 		4964EBB41B69541700BFBA7D /* MotionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MotionKit.framework; path = "Source/Resources/MotionKit/Example/build/Debug-iphoneos/MotionKit.framework"; sourceTree = "<group>"; };
 		4964EBB71B69550F00BFBA7D /* MotionKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MotionKit.swift; path = Source/Resources/MotionKit/MotionKit.swift; sourceTree = "<group>"; };
+		4964EBB91B70943C00BFBA7D /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		4964EBBB1B7099A800BFBA7D /* Level2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level2.swift; sourceTree = "<group>"; };
 		49D746321B5433EF0064DAB4 /* Gameplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gameplay.swift; path = Source/Gameplay.swift; sourceTree = "<group>"; };
 		49D746381B5434170064DAB4 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = Source/Player.swift; sourceTree = "<group>"; };
 		49D7463A1B543B8E0064DAB4 /* WalkerGoblin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalkerGoblin.swift; path = Source/WalkerGoblin.swift; sourceTree = "<group>"; };
@@ -176,7 +179,6 @@
 		49D7464A1B557A160064DAB4 /* Level1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Level1.swift; path = Source/Level1.swift; sourceTree = "<group>"; };
 		49DD33E31B5FDA3D009FE6F8 /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coin.swift; path = Source/Coin.swift; sourceTree = "<group>"; };
 		49DD33E91B6007C0009FE6F8 /* RunnerGoblin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RunnerGoblin.swift; path = Source/RunnerGoblin.swift; sourceTree = "<group>"; };
-		49DD34071B66AA3F009FE6F8 /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Level.swift; path = Source/Level.swift; sourceTree = "<group>"; };
 		49DD340B1B66B138009FE6F8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Source/libs/cocos2d-iphone/external/SSZipArchive/Images.xcassets"; sourceTree = "<group>"; };
 		5B12100919748273004C1E1D /* libEGL.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEGL.so; path = /usr/lib/armv7a/libEGL.so; sourceTree = SDKROOT; };
 		5B12100F197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
@@ -480,10 +482,11 @@
 				49DD33E91B6007C0009FE6F8 /* RunnerGoblin.swift */,
 				49DD33E31B5FDA3D009FE6F8 /* Coin.swift */,
 				4964EBA41B692BC200BFBA7D /* Shelf.swift */,
+				4964EBB91B70943C00BFBA7D /* Level.swift */,
 				49D7464A1B557A160064DAB4 /* Level1.swift */,
+				4964EBBB1B7099A800BFBA7D /* Level2.swift */,
 				49D746381B5434170064DAB4 /* Player.swift */,
 				49D7463A1B543B8E0064DAB4 /* WalkerGoblin.swift */,
-				49DD34071B66AA3F009FE6F8 /* Level.swift */,
 				4964EBB71B69550F00BFBA7D /* MotionKit.swift */,
 				D352B48019EC608A00829775 /* MetalShaders */,
 			);
@@ -876,12 +879,13 @@
 				49DD33EA1B6007C0009FE6F8 /* RunnerGoblin.swift in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				49D746331B5433EF0064DAB4 /* Gameplay.swift in Sources */,
+				4964EBBC1B7099A800BFBA7D /* Level2.swift in Sources */,
 				49D7463B1B543B8E0064DAB4 /* WalkerGoblin.swift in Sources */,
 				4964EBB81B69550F00BFBA7D /* MotionKit.swift in Sources */,
 				7A046D7919E84ED5004C4763 /* MainScene.swift in Sources */,
+				4964EBBA1B70943C00BFBA7D /* Level.swift in Sources */,
 				49D746391B5434170064DAB4 /* Player.swift in Sources */,
 				49DD33E41B5FDA3D009FE6F8 /* Coin.swift in Sources */,
-				49DD34081B66AA3F009FE6F8 /* Level.swift in Sources */,
 				4964EB9C1B68431E00BFBA7D /* LevelSelect.swift in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
 			);

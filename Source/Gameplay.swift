@@ -37,7 +37,7 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     
     func damageDone() -> Double {
         
-        return 0.054 + ((Double(curLvlPlyr) * 0.054)/4)
+        return 0.25 + ((Double(curLvlPlyr) * 0.25)/4)
         
     }
     
@@ -51,7 +51,7 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     func didLoadFromCCB () {
        
        // println(motionManager.accelerometerData)
-//        gamePhysicsNode.debugDraw = true
+        gamePhysicsNode.debugDraw = true
 
 //        motionManager.startAccelerometerUpdates()
         
@@ -68,8 +68,6 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
 
             self.player.position.x = CGFloat(191 + (x*115))
             
-//            println("\(self.player.position.x)")
-            
         }
         
         gamePhysicsNode.collisionDelegate = self
@@ -77,7 +75,8 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         
         experience.scaleX = 0.0
         
-        var level = CCBReader.load("Levels/Level1") as! Level1
+//        var level = CCBReader.load("Levels/Level") as! Level
+        var level = CCBReader.load("Levels/Level1") as! Level
         level.delegate = self
         currentLevel.addChild(level)
         
@@ -111,6 +110,7 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
 
         
         if enemy.healthBar.scaleX < 0 {
+            
             enemyPositionX = enemy.position.x
             enemyPositionY = enemy.position.y
             
@@ -123,6 +123,7 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
             }
             experience.visible = true
             experience.scaleX = clampf(experience.scaleX + Float(expGain()), 0, 0.573)
+            
             if experience.scaleX > 0.5 {
                 experience.scaleX = 0.0
                 curLvlPlyr++
@@ -175,7 +176,8 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     }
     
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, enemy: WalkerGoblin!, boundary: CCNode!) -> ObjCBool {
-        enemy.removeFromParent()
+        
+        enemy.removeFromParent() ?? donothing()
         
         health.scaleX = clampf(health.scaleX - damageReceived, 0, 1)
         
@@ -202,6 +204,10 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     
     func gameOver(){
         restartButton.visible = true
+    }
+    
+    func donothing(){
+        var x = 0
     }
 
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!){
@@ -234,6 +240,8 @@ extension Gameplay: SpawnProtocol{
         let randNumberX = CGFloat(arc4random_uniform(100)) + CGFloat(100)
         let randNumberY = CGFloat(arc4random_uniform(200)) + CGFloat(600)
         
+        aGoblin.scaleX = 0.25
+        aGoblin.scaleY = 0.25
         aGoblin.position = ccp(randNumberX, randNumberY)
         
     }
@@ -245,10 +253,12 @@ extension Gameplay: SpawnProtocol{
         
         let randNumberX = CGFloat(arc4random_uniform(100)) + CGFloat(100)
         let randNumberY = CGFloat(arc4random_uniform(200)) + CGFloat(600)
+
+        aQuickie.scaleX = 0.25
+        aQuickie.scaleY = 0.25
         
         aQuickie.position = ccp(randNumberX, randNumberY)
-//        aQuickie.scaleX = 0.25
-//        aQuickie.scaleY = 0.30
+
     }
     
     func spawnCoin(var X: CGFloat, var Y:CGFloat){
