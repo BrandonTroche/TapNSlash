@@ -10,23 +10,15 @@ import Foundation
 
 class Player: CCSprite {
     
-    
-    
     func tap() {
-                
-//        var slash = CCActionRotateBy(duration: 0.15, angle: 30)
         
-//        self.runAction(slash) ?? 0
+        stopAllActions()
         
-        self.animationManager.runAnimationsForSequenceNamed("Tap")
-
+        var slash = CCActionRotateTo(duration: 0.15, angle: -10)
+        var center = CCActionRotateTo(duration: 0.15, angle: -55)
+        
+        runAction(CCActionSequence(array: [slash, center]))
     }
-//    
-//    func center() {
-//        var center = CCActionRotateBy(duration: 0.15, angle: -30)
-//        self.runAction(center) ?? 0
-//
-//    }
     
     func specialMove(){
         self.animationManager.runAnimationsForSequenceNamed("Special Attack")

@@ -51,7 +51,7 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     func didLoadFromCCB () {
        
        // println(motionManager.accelerometerData)
-        gamePhysicsNode.debugDraw = true
+//        gamePhysicsNode.debugDraw = true
 
 //        motionManager.startAccelerometerUpdates()
         
@@ -66,7 +66,7 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
 //            self.yValLabel.string = "Y: \(y)"
 //            self.zValLabel.string = "Z: \(z)"
 
-            self.player.position.x = CGFloat(191 + (x*115))
+            self.player.position.x = CGFloat(236.7 + (x*125))
             
         }
         
@@ -106,6 +106,8 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         
         enemy.healthBar.scaleX -= Float(damageDone()) ?? 0
         
+        
+        
 //        enemy.physicsBody.applyImpulse(ccp(0, 400))
 
         
@@ -123,6 +125,7 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
             }
             experience.visible = true
             experience.scaleX = clampf(experience.scaleX + Float(expGain()), 0, 0.573)
+
             
             if experience.scaleX > 0.5 {
                 experience.scaleX = 0.0
@@ -212,9 +215,8 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
 
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!){
         
-//        player.tap()
-//      player.center()
-        animationManager.runAnimationsForSequenceNamed("Tap")
+        player.tap()
+//        animationManager.runAnimationsForSequenceNamed("Tap")
     
     }
     

@@ -10,13 +10,13 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>66</integer>
+	<integer>67</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
 	<integer>0</integer>
 	<key>currentSequenceId</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>docDimensionsType</key>
 	<integer>0</integer>
 	<key>fileType</key>
@@ -826,6 +826,8 @@
 						<string>ExperienceBar.ccb</string>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1861,7 +1863,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string></string>
+							<string>Assets/Buttons-23@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1976,8 +1978,6 @@
 								</array>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>
@@ -2275,7 +2275,7 @@
 								<key>type</key>
 								<string>Degrees</string>
 								<key>value</key>
-								<real>-45</real>
+								<real>-55</real>
 							</dict>
 							<dict>
 								<key>name</key>

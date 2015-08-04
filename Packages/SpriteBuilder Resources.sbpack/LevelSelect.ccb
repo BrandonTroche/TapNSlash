@@ -110,7 +110,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Assets/Mountains/Bk@4x.png</string>
+							<string>Assets/Bk@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -146,8 +146,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -220,7 +218,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Assets/Mountains/Mountains@4x.png</string>
+							<string>Assets/Mountains@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -256,6 +254,8 @@
 						<array/>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -328,7 +328,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Assets/Mountains/Sky-Whisp@4x.png</string>
+							<string>Assets/Sky-Whisp@4x.png</string>
 						</array>
 					</dict>
 					<dict>

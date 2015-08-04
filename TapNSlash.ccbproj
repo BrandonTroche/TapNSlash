@@ -82,7 +82,7 @@
 		<dict>
 			<key>isDirty</key>
 			<true/>
-			<key>isSmartSpriteSheet</key>
+			<key>trimSprites</key>
 			<true/>
 		</dict>
 		<key>Sprites</key>
