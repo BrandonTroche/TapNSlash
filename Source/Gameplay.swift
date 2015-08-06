@@ -25,6 +25,9 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     weak var playerLevel: CCLabelTTF!
     weak var numCoins: CCLabelTTF!
     
+    var level = CCBReader.load("Levels/Level1") as! Level
+
+    
     var motionManager = CMMotionManager()
     var curLvlPlyr:NSInteger = 1
     var curNumCoins: Int = 0 {
@@ -66,7 +69,7 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
 //            self.yValLabel.string = "Y: \(y)"
 //            self.zValLabel.string = "Z: \(z)"
 
-            self.player.position.x = CGFloat(236.7 + (x*125))
+            self.player.position.x = CGFloat(236.7 + (x*250))
             
         }
         
@@ -76,7 +79,8 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         experience.scaleX = 0.0
         
 //        var level = CCBReader.load("Levels/Level") as! Level
-        var level = CCBReader.load("Levels/Level1") as! Level
+        
+//        var level = CCBReader.load("Levels/Level1") as! Level
         level.delegate = self
         currentLevel.addChild(level)
         
@@ -84,6 +88,12 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         
         audio.playBg("GameScene.mp3", loop:true)
         
+    }
+    
+    override func update(delta: CCTime) {
+        if level.checkLevelOver() {
+            restartButton.visible = true
+        }
     }
     
     func restart() {
