@@ -96,8 +96,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.5</real>
+							<real>0.40000000596046448</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -120,8 +120,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>143</real>
+							<real>116</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -166,7 +166,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Closed@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -177,7 +177,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -220,7 +220,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -422,8 +422,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.5</real>
+							<real>0.40000000596046448</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -446,8 +446,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>143</real>
+							<real>116</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -492,7 +492,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Closed@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -503,7 +503,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -546,7 +546,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -748,8 +748,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.5</real>
+							<real>0.40000000596046448</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -772,8 +772,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>143</real>
+							<real>116</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -818,7 +818,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Closed@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -829,7 +829,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -872,7 +872,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1074,8 +1074,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.5</real>
+							<real>0.40000000596046448</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -1098,8 +1098,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>143</real>
+							<real>116</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -1144,7 +1144,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Closed@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1155,7 +1155,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1198,7 +1198,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1400,8 +1400,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.5</real>
+							<real>0.40000000596046448</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -1424,8 +1424,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>143</real>
+							<real>116</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -1470,7 +1470,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Closed@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1481,7 +1481,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1524,7 +1524,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1726,8 +1726,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.5</real>
+							<real>0.40000000596046448</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -1750,8 +1750,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>143</real>
+							<real>116</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -1796,7 +1796,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Closed@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1807,7 +1807,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1850,7 +1850,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -2052,8 +2052,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.5</real>
+							<real>0.40000000596046448</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -2076,8 +2076,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>143</real>
+							<real>116</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -2122,7 +2122,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Closed@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -2133,7 +2133,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -2176,7 +2176,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -2320,6 +2320,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -2378,8 +2380,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.5</real>
+							<real>0.40000000596046448</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -2402,8 +2404,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>143</real>
+							<real>116</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -2448,7 +2450,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Closed@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -2459,7 +2461,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -2502,7 +2504,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -2704,8 +2706,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.5</real>
+							<real>0.40000000596046448</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -2728,8 +2730,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>143</real>
+							<real>116</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -2774,7 +2776,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Closed@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -2785,7 +2787,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -2828,7 +2830,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -3030,7 +3032,7 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
+							<real>0.89999997615814209</real>
 							<real>1</real>
 							<false/>
 							<integer>0</integer>
@@ -3054,8 +3056,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>95</real>
+							<real>144.5</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -3100,7 +3102,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Door-Wooden@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -3111,7 +3113,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>Assets/Door-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -3154,7 +3156,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Door-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -3356,8 +3358,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.5</real>
+							<real>0.40000000596046448</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -3380,8 +3382,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>143</real>
+							<real>116</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -3426,7 +3428,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Closed@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -3437,7 +3439,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -3480,7 +3482,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -3682,8 +3684,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.5</real>
+							<real>0.40000000596046448</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -3706,8 +3708,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>143</real>
+							<real>116</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -3752,7 +3754,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Closed@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -3763,7 +3765,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -3806,7 +3808,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -4008,8 +4010,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.5</real>
+							<real>0.40000000596046448</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -4032,8 +4034,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>143</real>
+							<real>116</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -4078,7 +4080,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Closed@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -4089,7 +4091,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -4132,7 +4134,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -4334,8 +4336,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.5</real>
+							<real>0.40000000596046448</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -4358,8 +4360,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>143</real>
+							<real>116</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -4404,7 +4406,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Closed@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -4415,7 +4417,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -4458,7 +4460,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -4660,8 +4662,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.5</real>
+							<real>0.40000000596046448</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -4684,8 +4686,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>143</real>
+							<real>116</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -4730,7 +4732,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Closed@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -4741,7 +4743,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -4784,7 +4786,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -4986,8 +4988,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.5</real>
+							<real>0.40000000596046448</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -5010,8 +5012,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>143</real>
+							<real>116</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -5056,7 +5058,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Closed@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -5067,7 +5069,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -5110,7 +5112,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -5312,8 +5314,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.5</real>
+							<real>0.40000000596046448</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -5336,8 +5338,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>143</real>
+							<real>116</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -5382,7 +5384,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Closed@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -5393,7 +5395,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -5436,7 +5438,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -5638,8 +5640,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.5</real>
+							<real>0.40000000596046448</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -5662,8 +5664,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>143</real>
+							<real>116</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -5708,7 +5710,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Closed@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -5719,7 +5721,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -5762,7 +5764,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -5964,8 +5966,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.5</real>
+							<real>0.40000000596046448</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -5988,8 +5990,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>143</real>
+							<real>116</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -6034,7 +6036,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Closed@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -6045,7 +6047,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -6088,7 +6090,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/Treasure-Chest-Open@4x.png</string>
 						</array>
 					</dict>
 					<dict>

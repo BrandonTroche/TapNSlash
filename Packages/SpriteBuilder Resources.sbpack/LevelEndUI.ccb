@@ -964,7 +964,7 @@
 						<string>Block</string>
 						<key>value</key>
 						<array>
-							<string></string>
+							<string>next</string>
 							<integer>1</integer>
 						</array>
 					</dict>
@@ -1290,7 +1290,7 @@
 						<string>Block</string>
 						<key>value</key>
 						<array>
-							<string></string>
+							<string>last</string>
 							<integer>1</integer>
 						</array>
 					</dict>
@@ -1616,7 +1616,7 @@
 						<string>Block</string>
 						<key>value</key>
 						<array>
-							<string></string>
+							<string>menu</string>
 							<integer>1</integer>
 						</array>
 					</dict>
@@ -1871,6 +1871,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -3121,7 +3123,7 @@
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string></string>
+		<string>LevelEndUI</string>
 		<key>displayName</key>
 		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>

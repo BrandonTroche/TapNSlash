@@ -10,10 +10,12 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>1</integer>
+	<integer>20</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
+	<integer>0</integer>
+	<key>currentSequenceId</key>
 	<integer>0</integer>
 	<key>docDimensionsType</key>
 	<integer>1</integer>
@@ -36,15 +38,151 @@
 		<key>baseClass</key>
 		<string>CCSprite</string>
 		<key>children</key>
-		<array/>
+		<array>
+			<dict>
+				<key>UUID</key>
+				<integer>1</integer>
+				<key>baseClass</key>
+				<string>CCBFile</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>CCBFile</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>name</string>
+						<key>type</key>
+						<string>StringSimple</string>
+						<key>value</key>
+						<string></string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>16.700000762939453</real>
+							<real>175.10000610351562</real>
+							<integer>0</integer>
+							<integer>0</integer>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>rotation</string>
+						<key>type</key>
+						<string>Degrees</string>
+						<key>value</key>
+						<real>180</real>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ccbFile</string>
+						<key>type</key>
+						<string>CCBFile</string>
+						<key>value</key>
+						<string>HealthBar.ccb</string>
+					</dict>
+				</array>
+			</dict>
+		</array>
 		<key>customClass</key>
-		<string></string>
+		<string>OgreEnemy</string>
 		<key>displayName</key>
 		<string>CCSprite</string>
 		<key>memberVarAssignmentName</key>
 		<string></string>
 		<key>memberVarAssignmentType</key>
 		<integer>1</integer>
+		<key>physicsBody</key>
+		<dict>
+			<key>affectedByGravity</key>
+			<false/>
+			<key>allowsRotation</key>
+			<false/>
+			<key>bodyShape</key>
+			<integer>0</integer>
+			<key>collisionCategories</key>
+			<array/>
+			<key>collisionMask</key>
+			<array/>
+			<key>collisionType</key>
+			<string>ogre</string>
+			<key>cornerRadius</key>
+			<real>0.0</real>
+			<key>density</key>
+			<real>0.10000000149011612</real>
+			<key>dynamic</key>
+			<true/>
+			<key>elasticity</key>
+			<real>0.30000001192092896</real>
+			<key>friction</key>
+			<real>0.30000001192092896</real>
+			<key>points</key>
+			<array>
+				<array>
+					<real>1.1125876903533936</real>
+					<real>2.2489676475524902</real>
+				</array>
+				<array>
+					<real>0.98103106021881104</real>
+					<real>11.944923400878906</real>
+				</array>
+				<array>
+					<real>101.01625823974609</real>
+					<real>11.399725914001465</real>
+				</array>
+				<array>
+					<real>100.7840576171875</real>
+					<real>2.3782162666320801</real>
+				</array>
+			</array>
+			<key>polygons</key>
+			<array>
+				<array>
+					<array>
+						<real>100.7840576171875</real>
+						<real>2.3782162666320801</real>
+					</array>
+					<array>
+						<real>101.01625823974609</real>
+						<real>11.399725914001465</real>
+					</array>
+					<array>
+						<real>0.98103106021881104</real>
+						<real>11.944923400878906</real>
+					</array>
+					<array>
+						<real>1.1125876903533936</real>
+						<real>2.2489676475524902</real>
+					</array>
+				</array>
+			</array>
+		</dict>
 		<key>properties</key>
 		<array>
 			<dict>
@@ -101,7 +239,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string></string>
+					<string>Assets/Ogrecube@4x.png</string>
 				</array>
 			</dict>
 			<dict>
@@ -137,6 +275,8 @@
 				<array/>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
@@ -155,6 +295,45 @@
 			<real>2</real>
 			<key>width</key>
 			<integer>0</integer>
+		</dict>
+	</array>
+	<key>sequences</key>
+	<array>
+		<dict>
+			<key>autoPlay</key>
+			<true/>
+			<key>callbackChannel</key>
+			<dict>
+				<key>keyframes</key>
+				<array/>
+				<key>type</key>
+				<integer>12</integer>
+			</dict>
+			<key>chainedSequenceId</key>
+			<integer>-1</integer>
+			<key>length</key>
+			<real>10</real>
+			<key>name</key>
+			<string>Default Timeline</string>
+			<key>offset</key>
+			<real>0.0</real>
+			<key>position</key>
+			<real>0.0</real>
+			<key>resolution</key>
+			<real>30</real>
+			<key>scale</key>
+			<real>128</real>
+			<key>sequenceId</key>
+			<integer>0</integer>
+			<key>soundChannel</key>
+			<dict>
+				<key>isExpanded</key>
+				<false/>
+				<key>keyframes</key>
+				<array/>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
 		</dict>
 	</array>
 	<key>stageBorder</key>

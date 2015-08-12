@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>67</integer>
+	<integer>68</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -826,8 +826,6 @@
 						<string>ExperienceBar.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -2823,8 +2821,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>285.05657958984375</real>
-							<real>148.9052734375</real>
+							<real>280.51226806640625</real>
+							<real>145.97116088867188</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2848,8 +2846,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.79838591814041138</real>
-							<real>0.68114668130874634</real>
+							<real>0.90143316984176636</real>
+							<real>0.32526984810829163</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -2873,7 +2871,7 @@
 						<key>value</key>
 						<array>
 							<real>40</real>
-							<real>40</real>
+							<real>117</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -2918,7 +2916,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/TD8@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -2936,9 +2934,9 @@
 						<string>Color3</string>
 						<key>value</key>
 						<array>
-							<real>0.64313727617263794</real>
-							<real>0.41960787773132324</real>
-							<real>0.090196080505847931</real>
+							<real>0.91372555494308472</real>
+							<real>0.62352943420410156</real>
+							<real>0.5215686559677124</real>
 							<real>1</real>
 						</array>
 					</dict>
@@ -3010,7 +3008,7 @@
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>Helvetica</string>
+						<string>Baskerville-SemiBold</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -3019,7 +3017,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>17</real>
+							<real>25</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -3081,10 +3079,10 @@
 						<string>Color4</string>
 						<key>value</key>
 						<array>
-							<real>0.0</real>
-							<real>0.0</real>
-							<real>0.0</real>
-							<real>0.0</real>
+							<real>0.039215687662363052</real>
+							<real>0.027450982481241226</real>
+							<real>0.094117656350135803</real>
+							<real>1</real>
 						</array>
 					</dict>
 					<dict>
@@ -3094,7 +3092,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
+							<real>3</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -3137,6 +3135,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>

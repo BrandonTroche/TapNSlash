@@ -25,8 +25,9 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     weak var playerLevel: CCLabelTTF!
     weak var numCoins: CCLabelTTF!
     
-    var level = CCBReader.load("Levels/Level1") as! Level
+    var level = CCBReader.load("Levels/Level") as! Level
 
+    var lvlDictionary = LEVELDICTIONARY
     
     var motionManager = CMMotionManager()
     var curLvlPlyr:NSInteger = 1
@@ -52,11 +53,8 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     
     
     func didLoadFromCCB () {
-       
-       // println(motionManager.accelerometerData)
+        
 //        gamePhysicsNode.debugDraw = true
-
-//        motionManager.startAccelerometerUpdates()
         
         let motionKit = MotionKit()
         
@@ -81,6 +79,24 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
 //        var level = CCBReader.load("Levels/Level") as! Level
         
 //        var level = CCBReader.load("Levels/Level1") as! Level
+        
+//        level.setVariables(lvlDictionary["Level1":"goblinMax"]!, lvlDictionary["Level1": "backParameterGoblin"]!, lvlDictionary["Level1":"frontParameterGoblin"]!, lvlDictionary["Level1":"vampMax"]!, lvlDictionary["Level1":"backParameterVamp"]!, lvlDictionary["Level1":"frontParameterVamp"]!, lvlDictionary["Level1":"maxOgre"]!, lvlDictionary["Level1":"backParameterOgre"]!, lvlDictionary["Level1":"frontParameterOgre"]!)
+ 
+//        level.setVariables(lvlDictionary["Level1":"goblinMax"], lvlDictionary["Level1": "backParameterGoblin"], lvlDictionary["Level1":"frontParameterGoblin"], lvlDictionary["Level1":"vampMax"], lvlDictionary["Level1":"backParameterVamp"], lvlDictionary["Level1":"frontParameterVamp"], lvlDictionary["Level1":"maxOgre"], lvlDictionary["Level1":"backParameterOgre"], lvlDictionary["Level1":"frontParameterOgre"])
+        
+        println(lvlDictionary)
+        
+        level.setVariables(lvlDictionary["LEVEL1"]!["goblinMax"]!,
+            backG:  lvlDictionary["LEVEL1"]!["backParameterGoblin"]!,
+            frontG: lvlDictionary["LEVEL1"]!["frontParameterGoblin"]!,
+            maxV:   lvlDictionary["LEVEL1"]!["vampMax"]!,
+            backV:  lvlDictionary["LEVEL1"]!["backParameterVamp"]!,
+            frontV: lvlDictionary["LEVEL1"]!["frontParameterVamp"]!,
+            maxO:   lvlDictionary["LEVEL1"]!["ogreMax"]!,
+            backO:  lvlDictionary["LEVEL1"]!["backParameterOgre"]!,
+            frontO: lvlDictionary["LEVEL1"]!["frontParameterOgre"]!)
+
+        
         level.delegate = self
         currentLevel.addChild(level)
         
@@ -289,6 +305,18 @@ extension Gameplay: SpawnProtocol{
         coinImage.color.UIColor
     }
     
+    func spawnOgre() {
+        var anOgre = CCBReader.load("OgreEnemy") as! OgreEnemy
+        
+        gamePhysicsNode.addChild(anOgre)
+        
+        let randNumberY = CGFloat(arc4random_uniform(200)) + CGFloat(600)
+        
+        anOgre.scaleX = 0.65
+        anOgre.scaleY = 0.65
+        anOgre.position = ccp(112, randNumberY)
+    }
+    
 }
 
 
@@ -298,6 +326,7 @@ protocol SpawnProtocol {
     
     func spawnGoblin()
     func spawnQuickie()
+    func spawnOgre()
     func spawnCoin(var X: CGFloat, var Y:CGFloat)
     
 }

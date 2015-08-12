@@ -12,6 +12,8 @@ class Coin: CCSprite {
     
     var delegate: CoinDelegate?
     var coinValue: Int = 1
+//    var collect = CCActionMoveTo(duration: 0.15, position)
+
    
     func didLoadFromCCB() {
         userInteractionEnabled = true
@@ -19,6 +21,7 @@ class Coin: CCSprite {
     
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
         delegate?.coinUp(self.coinValue)
+//        self.runAction(collect)
         self.removeFromParent()
 
     }

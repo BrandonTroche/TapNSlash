@@ -10,4 +10,7 @@ import Foundation
 
 class LevelSelect: CCNode {
     
+    func didLoadFromCCB(){
+    self.animationManager.runAnimationsForSequenceNamed("Default Timeline")
+    }
 }
