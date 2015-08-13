@@ -19,11 +19,16 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     weak var currentLevel: CCNode!
     weak var player: Player!
     weak var gamePhysicsNode: CCPhysicsNode!
-    weak var restartButton: CCButton!
     weak var experience: CCNode!
     weak var health: CCNode!
     weak var playerLevel: CCLabelTTF!
     weak var numCoins: CCLabelTTF!
+    weak var coinCollectNode: CCNode!
+    
+    
+    
+//    var lvlEndUI = CCBReader.load("LevelEndUI") as! LevelEndUI
+    
     
     var level = CCBReader.load("Levels/Level") as! Level
 
@@ -31,11 +36,16 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     
     var motionManager = CMMotionManager()
     var curLvlPlyr:NSInteger = 1
+    
+    var curLevelNumber:NSInteger = 0
+    
     var curNumCoins: Int = 0 {
         didSet{
             numCoins.string = "\(curNumCoins)"
         }
     }
+    
+    var isDone: Bool = false
     
     let damageReceived: Float = 0.1378
     
@@ -54,7 +64,7 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     
     func didLoadFromCCB () {
         
-//        gamePhysicsNode.debugDraw = true
+        gamePhysicsNode.debugDraw = true
         
         let motionKit = MotionKit()
         
@@ -76,14 +86,6 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         
         experience.scaleX = 0.0
         
-//        var level = CCBReader.load("Levels/Level") as! Level
-        
-//        var level = CCBReader.load("Levels/Level1") as! Level
-        
-//        level.setVariables(lvlDictionary["Level1":"goblinMax"]!, lvlDictionary["Level1": "backParameterGoblin"]!, lvlDictionary["Level1":"frontParameterGoblin"]!, lvlDictionary["Level1":"vampMax"]!, lvlDictionary["Level1":"backParameterVamp"]!, lvlDictionary["Level1":"frontParameterVamp"]!, lvlDictionary["Level1":"maxOgre"]!, lvlDictionary["Level1":"backParameterOgre"]!, lvlDictionary["Level1":"frontParameterOgre"]!)
- 
-//        level.setVariables(lvlDictionary["Level1":"goblinMax"], lvlDictionary["Level1": "backParameterGoblin"], lvlDictionary["Level1":"frontParameterGoblin"], lvlDictionary["Level1":"vampMax"], lvlDictionary["Level1":"backParameterVamp"], lvlDictionary["Level1":"frontParameterVamp"], lvlDictionary["Level1":"maxOgre"], lvlDictionary["Level1":"backParameterOgre"], lvlDictionary["Level1":"frontParameterOgre"])
-        
         println(lvlDictionary)
         
         level.setVariables(lvlDictionary["LEVEL1"]!["goblinMax"]!,
@@ -95,7 +97,19 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
             maxO:   lvlDictionary["LEVEL1"]!["ogreMax"]!,
             backO:  lvlDictionary["LEVEL1"]!["backParameterOgre"]!,
             frontO: lvlDictionary["LEVEL1"]!["frontParameterOgre"]!)
-
+        
+//        var stringLevel = "LEVEL" + String(curLevelNumber)
+//        
+//        level.setVariables(lvlDictionary[stringLevel]!["goblinMax"]!,
+//            backG:  lvlDictionary["LEVEL1"]!["backParameterGoblin"]!,
+//            frontG: lvlDictionary["LEVEL1"]!["frontParameterGoblin"]!,
+//            maxV:   lvlDictionary["LEVEL1"]!["vampMax"]!,
+//            backV:  lvlDictionary["LEVEL1"]!["backParameterVamp"]!,
+//            frontV: lvlDictionary["LEVEL1"]!["frontParameterVamp"]!,
+//            maxO:   lvlDictionary["LEVEL1"]!["ogreMax"]!,
+//            backO:  lvlDictionary["LEVEL1"]!["backParameterOgre"]!,
+//            frontO: lvlDictionary["LEVEL1"]!["frontParameterOgre"]!)
+//
         
         level.delegate = self
         currentLevel.addChild(level)
@@ -107,15 +121,12 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     }
     
     override func update(delta: CCTime) {
-        if level.checkLevelOver() {
-            restartButton.visible = true
+        if level.checkLevelOver() && !isDone {
+            level.lvlEndUI.visible = true
+            isDone = true
         }
     }
     
-    func restart() {
-        let scene = CCBReader.loadAsScene("Gameplay")
-        CCDirector.sharedDirector().presentScene(scene)
-    }
     
     func special() {
         animationManager.runAnimationsForSequenceNamed("Special Attack")
@@ -232,7 +243,7 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     
     
     func gameOver(){
-        restartButton.visible = true
+        level.lvlEndUI.visible = true
     }
     
     func donothing(){
@@ -242,7 +253,6 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!){
         
         player.tap()
-//        animationManager.runAnimationsForSequenceNamed("Tap")
     
     }
     
@@ -256,6 +266,15 @@ extension Gameplay: CoinDelegate{
         
     }
     
+}
+
+extension Gameplay: CurrentLevel{
+    
+    func getLevel(var ourCurrentLevel: Int) {
+        
+        curLevelNumber = ourCurrentLevel
+        
+    }
 }
 
 extension Gameplay: SpawnProtocol{
@@ -320,7 +339,9 @@ extension Gameplay: SpawnProtocol{
 }
 
 
-
+//protocol CurrentLevel{
+//    func getLevel(var ourCurrentLevel: Int)
+//}
 
 protocol SpawnProtocol {
     

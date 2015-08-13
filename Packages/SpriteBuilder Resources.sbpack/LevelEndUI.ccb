@@ -926,7 +926,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>216.86526489257812</real>
+							<real>233.07345581054688</real>
 							<real>83.905784606933594</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -951,8 +951,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.95649862289428711</real>
-							<real>0.73755866289138794</real>
+							<real>0.34531474113464355</real>
+							<real>0.46066060662269592</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -975,8 +975,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>244</real>
+							<real>63</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -1021,7 +1021,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/buttons-47@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1032,7 +1032,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>Assets/buttons-48@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1075,7 +1075,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/buttons-48@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1092,7 +1092,7 @@
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>Helvetica</string>
+						<string>Baskerville-SemiBold</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1101,7 +1101,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>17</real>
+							<real>30</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1163,10 +1163,10 @@
 						<string>Color4</string>
 						<key>value</key>
 						<array>
-							<real>0.0</real>
-							<real>0.0</real>
-							<real>0.0</real>
-							<real>0.0</real>
+							<real>0.023529414087533951</real>
+							<real>0.035294119268655777</real>
+							<real>0.031372550874948502</real>
+							<real>1</real>
 						</array>
 					</dict>
 					<dict>
@@ -1176,7 +1176,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
+							<real>2</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1277,8 +1277,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.94999998807907104</real>
-							<real>0.73000001907348633</real>
+							<real>0.35326871275901794</real>
+							<real>0.46131414175033569</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -1301,8 +1301,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>244</real>
+							<real>63</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -1347,7 +1347,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/buttons-47@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1358,7 +1358,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>Assets/buttons-48@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1401,7 +1401,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/buttons-48@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1418,7 +1418,7 @@
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>Helvetica</string>
+						<string>Baskerville-SemiBold</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1427,7 +1427,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>17</real>
+							<real>30</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1489,10 +1489,10 @@
 						<string>Color4</string>
 						<key>value</key>
 						<array>
-							<real>0.0</real>
-							<real>0.0</real>
-							<real>0.0</real>
-							<real>0.0</real>
+							<real>0.019607843831181526</real>
+							<real>0.015686275437474251</real>
+							<real>0.023529414087533951</real>
+							<real>1</real>
 						</array>
 					</dict>
 					<dict>
@@ -1502,7 +1502,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
+							<real>2</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1578,8 +1578,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>152.39517211914062</real>
-							<real>39.840286254882812</real>
+							<real>152.50959777832031</real>
+							<real>45.840286254882812</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1603,8 +1603,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.74807709455490112</real>
+							<real>0.54179203510284424</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -1627,8 +1627,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>244</real>
+							<real>63</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -1673,7 +1673,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/buttons-47@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1684,7 +1684,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>Assets/buttons-48@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1727,7 +1727,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>Assets/buttons-48@4x.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -1744,7 +1744,7 @@
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>Helvetica</string>
+						<string>Baskerville-SemiBold</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1753,7 +1753,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>17</real>
+							<real>30</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1815,10 +1815,10 @@
 						<string>Color4</string>
 						<key>value</key>
 						<array>
-							<real>0.0</real>
-							<real>0.0</real>
-							<real>0.0</real>
-							<real>0.0</real>
+							<real>0.027450982481241226</real>
+							<real>0.043137256056070328</real>
+							<real>0.023529414087533951</real>
+							<real>1</real>
 						</array>
 					</dict>
 					<dict>
@@ -1828,7 +1828,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
+							<real>2</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1871,8 +1871,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -2946,7 +2944,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>57.274997711181641</real>
+							<real>47.862342834472656</real>
 							<real>109.48729705810547</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2994,7 +2992,7 @@
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>Helvetica</string>
+						<string>Baskerville-SemiBold</string>
 					</dict>
 					<dict>
 						<key>name</key>

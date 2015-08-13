@@ -80,8 +80,6 @@
 		</dict>
 		<key>Assets</key>
 		<dict>
-			<key>isDirty</key>
-			<true/>
 			<key>trimSprites</key>
 			<true/>
 		</dict>

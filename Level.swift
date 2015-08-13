@@ -10,6 +10,8 @@ import Foundation
 
 class Level: CCNode {
     
+    weak var lvlEndUI:LevelEndUI!
+    
     var delegate: SpawnProtocol!
     
     var gobCount:Int = 0
@@ -104,3 +106,4 @@ class Level: CCNode {
     
     
 }
+

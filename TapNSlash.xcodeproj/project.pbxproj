@@ -14,7 +14,6 @@
 		4964EBB81B69550F00BFBA7D /* MotionKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964EBB71B69550F00BFBA7D /* MotionKit.swift */; };
 		4964EBBA1B70943C00BFBA7D /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964EBB91B70943C00BFBA7D /* Level.swift */; };
 		4964EBBE1B7329AB00BFBA7D /* OgreEnemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964EBBD1B7329AB00BFBA7D /* OgreEnemy.swift */; };
-		4964EBC01B75493C00BFBA7D /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964EBBF1B75493C00BFBA7D /* Example.swift */; };
 		4964EBC21B75497500BFBA7D /* LevelDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964EBC11B75497500BFBA7D /* LevelDictionary.swift */; };
 		4964EBC41B79AEB400BFBA7D /* MainSceneAudio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4964EBC31B79AEB400BFBA7D /* MainSceneAudio.mp3 */; };
 		4964EBD31B7B0FA900BFBA7D /* LevelEndUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964EBD21B7B0FA900BFBA7D /* LevelEndUI.swift */; };
@@ -22,7 +21,6 @@
 		49D746391B5434170064DAB4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D746381B5434170064DAB4 /* Player.swift */; };
 		49D7463B1B543B8E0064DAB4 /* WalkerGoblin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D7463A1B543B8E0064DAB4 /* WalkerGoblin.swift */; };
 		49D746431B5557900064DAB4 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D746421B5557900064DAB4 /* CoreMotion.framework */; };
-		49D7464B1B557A160064DAB4 /* Level1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D7464A1B557A160064DAB4 /* Level1.swift */; };
 		49DD33E41B5FDA3D009FE6F8 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD33E31B5FDA3D009FE6F8 /* Coin.swift */; };
 		49DD33EA1B6007C0009FE6F8 /* RunnerGoblin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD33E91B6007C0009FE6F8 /* RunnerGoblin.swift */; };
 		49DD340C1B66B138009FE6F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49DD340B1B66B138009FE6F8 /* Images.xcassets */; };
@@ -176,7 +174,6 @@
 		4964EBB71B69550F00BFBA7D /* MotionKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MotionKit.swift; path = Source/Resources/MotionKit/MotionKit.swift; sourceTree = "<group>"; };
 		4964EBB91B70943C00BFBA7D /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		4964EBBD1B7329AB00BFBA7D /* OgreEnemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OgreEnemy.swift; path = Source/OgreEnemy.swift; sourceTree = "<group>"; };
-		4964EBBF1B75493C00BFBA7D /* Example.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 		4964EBC11B75497500BFBA7D /* LevelDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelDictionary.swift; sourceTree = "<group>"; };
 		4964EBC31B79AEB400BFBA7D /* MainSceneAudio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = MainSceneAudio.mp3; path = ../../../MainSceneAudio.mp3; sourceTree = "<group>"; };
 		4964EBD21B7B0FA900BFBA7D /* LevelEndUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelEndUI.swift; path = Source/LevelEndUI.swift; sourceTree = "<group>"; };
@@ -184,7 +181,6 @@
 		49D746381B5434170064DAB4 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = Source/Player.swift; sourceTree = "<group>"; };
 		49D7463A1B543B8E0064DAB4 /* WalkerGoblin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalkerGoblin.swift; path = Source/WalkerGoblin.swift; sourceTree = "<group>"; };
 		49D746421B5557900064DAB4 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		49D7464A1B557A160064DAB4 /* Level1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Level1.swift; path = Source/Level1.swift; sourceTree = "<group>"; };
 		49DD33E31B5FDA3D009FE6F8 /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coin.swift; path = Source/Coin.swift; sourceTree = "<group>"; };
 		49DD33E91B6007C0009FE6F8 /* RunnerGoblin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RunnerGoblin.swift; path = Source/RunnerGoblin.swift; sourceTree = "<group>"; };
 		49DD340B1B66B138009FE6F8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Source/libs/cocos2d-iphone/external/SSZipArchive/Images.xcassets"; sourceTree = "<group>"; };
@@ -493,10 +489,8 @@
 				4964EBA41B692BC200BFBA7D /* Shelf.swift */,
 				4964EBD21B7B0FA900BFBA7D /* LevelEndUI.swift */,
 				4964EBB91B70943C00BFBA7D /* Level.swift */,
-				49D7464A1B557A160064DAB4 /* Level1.swift */,
 				49D746381B5434170064DAB4 /* Player.swift */,
 				49D7463A1B543B8E0064DAB4 /* WalkerGoblin.swift */,
-				4964EBBF1B75493C00BFBA7D /* Example.swift */,
 				4964EBBD1B7329AB00BFBA7D /* OgreEnemy.swift */,
 				4964EBC11B75497500BFBA7D /* LevelDictionary.swift */,
 				4964EBB71B69550F00BFBA7D /* MotionKit.swift */,
@@ -888,12 +882,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4964EBA51B692BC200BFBA7D /* Shelf.swift in Sources */,
-				49D7464B1B557A160064DAB4 /* Level1.swift in Sources */,
 				4964EBD31B7B0FA900BFBA7D /* LevelEndUI.swift in Sources */,
 				49DD33EA1B6007C0009FE6F8 /* RunnerGoblin.swift in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				4964EBBE1B7329AB00BFBA7D /* OgreEnemy.swift in Sources */,
-				4964EBC01B75493C00BFBA7D /* Example.swift in Sources */,
 				49D746331B5433EF0064DAB4 /* Gameplay.swift in Sources */,
 				49D7463B1B543B8E0064DAB4 /* WalkerGoblin.swift in Sources */,
 				4964EBB81B69550F00BFBA7D /* MotionKit.swift in Sources */,

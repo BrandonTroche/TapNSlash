@@ -21,9 +21,7 @@ class Coin: CCSprite {
     
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
         delegate?.coinUp(self.coinValue)
-//        self.runAction(collect)
         self.removeFromParent()
-
     }
     
 }

@@ -10,9 +10,13 @@ import Foundation
 
 class Shelf: CCSprite{
     
+    var delegate: CurrentLevel!
+    
     func level1(){
+        
         let scene = CCBReader.loadAsScene("Gameplay")
         CCDirector.sharedDirector().presentScene(scene)
+//        delegate.getLevel(1)
     }
     
     func level2(){
@@ -86,4 +90,8 @@ class Shelf: CCSprite{
     func level19(){
         
     }
+}
+
+protocol CurrentLevel{
+    func getLevel(var ourCurrentLevel: Int)
 }

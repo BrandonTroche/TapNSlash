@@ -18,7 +18,7 @@ class LevelEndUI: CCNode {
     }
     
     func menu(){
-        let scene = CCBReader.loadAsScene("")
+        let scene = CCBReader.loadAsScene("LevelSelect")
         CCDirector.sharedDirector().presentScene(scene)
     }
 }
