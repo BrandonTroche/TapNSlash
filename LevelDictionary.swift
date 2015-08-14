@@ -16,7 +16,7 @@ import Foundation
 //"backParameterGoblin" : 0,
 //"frontParameterGoblin" : 0,
 //"backParameterVamp" : 0,
-//"fronParameterVamp" : 0,
+//"frontParameterVamp" : 0,
 //"backParameterOgre" : 0,
 //"frontParameterOgre" : 0,
 
@@ -64,17 +64,102 @@ let LEVELDICTIONARY = [
     
     "LEVEL3":[
         
-        "goblinMax" : 0,
+        "goblinMax" : 60,
         "vampMax" : 0,
         "ogreMax" : 0,
-        "backParameterGoblin" : 0,
-        "frontParameterGoblin" : 0,
+        "backParameterGoblin" : 250,
+        "frontParameterGoblin" : 10,
         "backParameterVamp" : 0,
         "frontParameterVamp" : 0,
         "backParameterOgre" : 0,
         "frontParameterOgre" : 0,
     
     
-    ]
+    ],
+    
+    "LEVEL4":[
+        "goblinMax" : 80,
+        "vampMax" : 0,
+        "ogreMax" : 0,
+        "backParameterGoblin" : 250,
+        "frontParameterGoblin" : 15,
+        "backParameterVamp" : 0,
+        "frontParameterVamp" : 0,
+        "backParameterOgre" : 0,
+        "frontParameterOgre" : 0,
+    ],
+    
+    "LEVEL5":[
+        "goblinMax" : 100,
+        "vampMax" : 10,
+        "ogreMax" : 0,
+        "backParameterGoblin" : 250,
+        "frontParameterGoblin" : 15,
+        "backParameterVamp" : 100,
+        "frontParameterVamp" : 5,
+        "backParameterOgre" : 0,
+        "frontParameterOgre" : 0,
+    ],
+    
+    "LEVEL6":[
+        "goblinMax" : 100,
+        "vampMax" : 20,
+        "ogreMax" : 0,
+        "backParameterGoblin" : 250,
+        "frontParameterGoblin" : 15,
+        "backParameterVamp" : 100,
+        "frontParameterVamp" : 10,
+        "backParameterOgre" : 0,
+        "frontParameterOgre" : 0,
+    ],
+    
+//    "LEVEL7":[
+//        "goblinMax" : 120,
+//        "vampMax" : 30,
+//        "ogreMax" : 0,
+//        "backParameterGoblin" : 250,
+//        "frontParameterGoblin" : 25,
+//        "backParameterVamp" : 100,
+//        "frontParameterVamp" : 15,
+//        "backParameterOgre" : 0,
+//        "frontParameterOgre" : 0,
+//    ],
+//    
+//    "LEVEL8":[
+//        "goblinMax" : 140,
+//        "vampMax" : 40,
+//        "ogreMax" : 0,
+//        "backParameterGoblin" : 250,
+//        "frontParameterGoblin" : 25,
+//        "backParameterVamp" : 100,
+//        "frontParameterVamp" : 5,
+//        "backParameterOgre" : 0,
+//        "frontParameterOgre" : 0,
+//    ],
+//
+//    "LEVEL9":[
+//        "goblinMax" : 160,
+//        "vampMax" : 50,
+//        "ogreMax" : 0,
+//        "backParameterGoblin" : 250,
+//        "frontParameterGoblin" : 30,
+//        "backParameterVamp" : 100,
+//        "frontParameterVamp" : 5,
+//        "backParameterOgre" : 0,
+//        "frontParameterOgre" : 0,
+//    ],
+//    
+//    "LEVEL10":[
+//        "goblinMax" : 200,
+//        "vampMax" : 50,
+//        "ogreMax" : 0,
+//        "backParameterGoblin" : 250,
+//        "frontParameterGoblin" : 40,
+//        "backParameterVamp" : 100,
+//        "frontParameterVamp" : 5,
+//        "backParameterOgre" : 0,
+//        "frontParameterOgre" : 0,
+//    ]
+    
     
 ]

@@ -15,8 +15,6 @@ class MainScene: CCNode {
         
         audio.playBg("MainSceneAudio.mp3", loop:true)
         
-        self.animationManager.runAnimationsForSequenceNamed("Default Timeline")
-
     }
     
     

@@ -37,8 +37,6 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     var motionManager = CMMotionManager()
     var curLvlPlyr:NSInteger = 1
     
-    var curLevelNumber:NSInteger = 0
-    
     var curNumCoins: Int = 0 {
         didSet{
             numCoins.string = "\(curNumCoins)"
@@ -68,7 +66,7 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         
         let motionKit = MotionKit()
         
-        motionKit.getAccelerometerValues (interval: 0.05){
+        motionKit.getAccelerometerValues (interval: 1.0/60 /*0.05*/){
             (x, y, z) in
 
 //            println("X: \(x) Y: \(y) Z: \(z)")
@@ -77,7 +75,9 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
 //            self.yValLabel.string = "Y: \(y)"
 //            self.zValLabel.string = "Z: \(z)"
 
+            
             self.player.position.x = CGFloat(236.7 + (x*250))
+            //make the shake disappear
             
         }
         
@@ -86,21 +86,9 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         
         experience.scaleX = 0.0
         
-        println(lvlDictionary)
-        
-        level.setVariables(lvlDictionary["LEVEL1"]!["goblinMax"]!,
-            backG:  lvlDictionary["LEVEL1"]!["backParameterGoblin"]!,
-            frontG: lvlDictionary["LEVEL1"]!["frontParameterGoblin"]!,
-            maxV:   lvlDictionary["LEVEL1"]!["vampMax"]!,
-            backV:  lvlDictionary["LEVEL1"]!["backParameterVamp"]!,
-            frontV: lvlDictionary["LEVEL1"]!["frontParameterVamp"]!,
-            maxO:   lvlDictionary["LEVEL1"]!["ogreMax"]!,
-            backO:  lvlDictionary["LEVEL1"]!["backParameterOgre"]!,
-            frontO: lvlDictionary["LEVEL1"]!["frontParameterOgre"]!)
-        
-//        var stringLevel = "LEVEL" + String(curLevelNumber)
+        coinCollectNode.physicsBody.sensor = true
 //        
-//        level.setVariables(lvlDictionary[stringLevel]!["goblinMax"]!,
+//        level.setVariables(lvlDictionary["LEVEL1"]!["goblinMax"]!,
 //            backG:  lvlDictionary["LEVEL1"]!["backParameterGoblin"]!,
 //            frontG: lvlDictionary["LEVEL1"]!["frontParameterGoblin"]!,
 //            maxV:   lvlDictionary["LEVEL1"]!["vampMax"]!,
@@ -109,7 +97,19 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
 //            maxO:   lvlDictionary["LEVEL1"]!["ogreMax"]!,
 //            backO:  lvlDictionary["LEVEL1"]!["backParameterOgre"]!,
 //            frontO: lvlDictionary["LEVEL1"]!["frontParameterOgre"]!)
-//
+        
+        var stringLevel = "LEVEL" + String(LEVEL)
+        
+        level.setVariables(lvlDictionary[stringLevel]!["goblinMax"]!,
+            backG:  lvlDictionary[stringLevel]!["backParameterGoblin"]!,
+            frontG: lvlDictionary[stringLevel]!["frontParameterGoblin"]!,
+            maxV:   lvlDictionary[stringLevel]!["vampMax"]!,
+            backV:  lvlDictionary[stringLevel]!["backParameterVamp"]!,
+            frontV: lvlDictionary[stringLevel]!["frontParameterVamp"]!,
+            maxO:   lvlDictionary[stringLevel]!["ogreMax"]!,
+            backO:  lvlDictionary[stringLevel]!["backParameterOgre"]!,
+            frontO: lvlDictionary[stringLevel]!["frontParameterOgre"]!)
+
         
         level.delegate = self
         currentLevel.addChild(level)
@@ -132,6 +132,12 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         animationManager.runAnimationsForSequenceNamed("Special Attack")
     }
     
+    
+    func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, coinCollector: CCNode!, coin: CCSprite!) -> ObjCBool {
+        coinUp(1)
+        coin.removeFromParent()
+        return true
+    }
     
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, enemy: WalkerGoblin!, hero: CCSprite!) -> ObjCBool{
         
@@ -253,7 +259,14 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!){
         
         player.tap()
+        coinCollectNode.position = touch.locationInWorld()
+        coinCollectNode.position.y -= 40
+
+    }
     
+    override func touchMoved(touch: CCTouch!, withEvent event: CCTouchEvent!) {
+        coinCollectNode.position = touch.locationInWorld()
+        coinCollectNode.position.y -= 40
     }
     
 }
@@ -266,15 +279,6 @@ extension Gameplay: CoinDelegate{
         
     }
     
-}
-
-extension Gameplay: CurrentLevel{
-    
-    func getLevel(var ourCurrentLevel: Int) {
-        
-        curLevelNumber = ourCurrentLevel
-        
-    }
 }
 
 extension Gameplay: SpawnProtocol{
@@ -313,14 +317,15 @@ extension Gameplay: SpawnProtocol{
         
         coinImage.scaleX = 0.183
         coinImage.scaleY = 0.156
-        
-        self.addChild(coinImage)
-        
+        coinImage.delegate = self
+
+        gamePhysicsNode.addChild(coinImage)
+
         coinImage.position.x = X
         coinImage.position.y = Y
         
-        coinImage.delegate = self
-        
+        coinImage.physicsBody.sensor = true
+
         coinImage.color.UIColor
     }
     
@@ -337,11 +342,6 @@ extension Gameplay: SpawnProtocol{
     }
     
 }
-
-
-//protocol CurrentLevel{
-//    func getLevel(var ourCurrentLevel: Int)
-//}
 
 protocol SpawnProtocol {
     

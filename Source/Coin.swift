@@ -19,10 +19,10 @@ class Coin: CCSprite {
         userInteractionEnabled = true
     }
     
-    override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
-        delegate?.coinUp(self.coinValue)
-        self.removeFromParent()
-    }
+//    override func touchBegan(touch: CCTouch!, withEvent event: CCTouchEvent!) {
+//        delegate?.coinUp(self.coinValue)
+//        self.removeFromParent()
+//    }
     
 }
 
