@@ -15,7 +15,6 @@
 		4964EBBA1B70943C00BFBA7D /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964EBB91B70943C00BFBA7D /* Level.swift */; };
 		4964EBBE1B7329AB00BFBA7D /* OgreEnemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964EBBD1B7329AB00BFBA7D /* OgreEnemy.swift */; };
 		4964EBC21B75497500BFBA7D /* LevelDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964EBC11B75497500BFBA7D /* LevelDictionary.swift */; };
-		4964EBC41B79AEB400BFBA7D /* MainSceneAudio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4964EBC31B79AEB400BFBA7D /* MainSceneAudio.mp3 */; };
 		4964EBD31B7B0FA900BFBA7D /* LevelEndUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4964EBD21B7B0FA900BFBA7D /* LevelEndUI.swift */; };
 		49D746331B5433EF0064DAB4 /* Gameplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D746321B5433EF0064DAB4 /* Gameplay.swift */; };
 		49D746391B5434170064DAB4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D746381B5434170064DAB4 /* Player.swift */; };
@@ -24,6 +23,11 @@
 		49DD33E41B5FDA3D009FE6F8 /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD33E31B5FDA3D009FE6F8 /* Coin.swift */; };
 		49DD33EA1B6007C0009FE6F8 /* RunnerGoblin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD33E91B6007C0009FE6F8 /* RunnerGoblin.swift */; };
 		49DD340C1B66B138009FE6F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49DD340B1B66B138009FE6F8 /* Images.xcassets */; };
+		49EA97581B7DD200003B0456 /* CoinDrop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 49EA97571B7DD200003B0456 /* CoinDrop.mp3 */; };
+		49EA975C1B7E700B003B0456 /* MainSceneAudio2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 49EA975B1B7E700B003B0456 /* MainSceneAudio2.mp3 */; };
+		49EA975E1B7E8548003B0456 /* GameStateSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EA975D1B7E8548003B0456 /* GameStateSingleton.swift */; };
+		49EA97601B7E8B5F003B0456 /* iAdHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EA975F1B7E8B5F003B0456 /* iAdHandler.swift */; };
+		49EA97621B7E8CAA003B0456 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EA97611B7E8CAA003B0456 /* iAd.framework */; };
 		5B121030197484FA004C1E1D /* TapNSlashActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B12102F197484FA004C1E1D /* TapNSlashActivity.m */; };
 		5B121038197487F2004C1E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B737893E1807617C0076A88C /* AppDelegate.m */; };
 		7A046D7919E84ED5004C4763 /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A046D7519E84C36004C4763 /* MainScene.swift */; };
@@ -175,7 +179,6 @@
 		4964EBB91B70943C00BFBA7D /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		4964EBBD1B7329AB00BFBA7D /* OgreEnemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OgreEnemy.swift; path = Source/OgreEnemy.swift; sourceTree = "<group>"; };
 		4964EBC11B75497500BFBA7D /* LevelDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelDictionary.swift; sourceTree = "<group>"; };
-		4964EBC31B79AEB400BFBA7D /* MainSceneAudio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = MainSceneAudio.mp3; path = ../../../MainSceneAudio.mp3; sourceTree = "<group>"; };
 		4964EBD21B7B0FA900BFBA7D /* LevelEndUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelEndUI.swift; path = Source/LevelEndUI.swift; sourceTree = "<group>"; };
 		49D746321B5433EF0064DAB4 /* Gameplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gameplay.swift; path = Source/Gameplay.swift; sourceTree = "<group>"; };
 		49D746381B5434170064DAB4 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = Source/Player.swift; sourceTree = "<group>"; };
@@ -184,6 +187,11 @@
 		49DD33E31B5FDA3D009FE6F8 /* Coin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coin.swift; path = Source/Coin.swift; sourceTree = "<group>"; };
 		49DD33E91B6007C0009FE6F8 /* RunnerGoblin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RunnerGoblin.swift; path = Source/RunnerGoblin.swift; sourceTree = "<group>"; };
 		49DD340B1B66B138009FE6F8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Source/libs/cocos2d-iphone/external/SSZipArchive/Images.xcassets"; sourceTree = "<group>"; };
+		49EA97571B7DD200003B0456 /* CoinDrop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = CoinDrop.mp3; path = ../../../CoinDrop.mp3; sourceTree = "<group>"; };
+		49EA975B1B7E700B003B0456 /* MainSceneAudio2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = MainSceneAudio2.mp3; path = ../../../MainSceneAudio2.mp3; sourceTree = "<group>"; };
+		49EA975D1B7E8548003B0456 /* GameStateSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStateSingleton.swift; sourceTree = "<group>"; };
+		49EA975F1B7E8B5F003B0456 /* iAdHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iAdHandler.swift; sourceTree = "<group>"; };
+		49EA97611B7E8CAA003B0456 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		5B12100919748273004C1E1D /* libEGL.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEGL.so; path = /usr/lib/armv7a/libEGL.so; sourceTree = SDKROOT; };
 		5B12100F197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 		5B121011197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
@@ -290,6 +298,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49EA97621B7E8CAA003B0456 /* iAd.framework in Frameworks */,
 				49D746431B5557900064DAB4 /* CoreMotion.framework in Frameworks */,
 				7A97911819E631CD001FFC4D /* libcocos2d.a in Frameworks */,
 				8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */,
@@ -311,7 +320,8 @@
 		4964EB9F1B684E2100BFBA7D /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				4964EBC31B79AEB400BFBA7D /* MainSceneAudio.mp3 */,
+				49EA975B1B7E700B003B0456 /* MainSceneAudio2.mp3 */,
+				49EA97571B7DD200003B0456 /* CoinDrop.mp3 */,
 				4964EBA01B684E4900BFBA7D /* GameScene.mp3 */,
 			);
 			name = Audio;
@@ -484,6 +494,8 @@
 				7A046D7519E84C36004C4763 /* MainScene.swift */,
 				4964EB9B1B68431E00BFBA7D /* LevelSelect.swift */,
 				49D746321B5433EF0064DAB4 /* Gameplay.swift */,
+				49EA975F1B7E8B5F003B0456 /* iAdHandler.swift */,
+				49EA975D1B7E8548003B0456 /* GameStateSingleton.swift */,
 				49DD33E91B6007C0009FE6F8 /* RunnerGoblin.swift */,
 				49DD33E31B5FDA3D009FE6F8 /* Coin.swift */,
 				4964EBA41B692BC200BFBA7D /* Shelf.swift */,
@@ -547,6 +559,7 @@
 		B77F1B3017B978D7009739AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49EA97611B7E8CAA003B0456 /* iAd.framework */,
 				4964EBB41B69541700BFBA7D /* MotionKit.framework */,
 				4964EBB21B69540C00BFBA7D /* MotionKit.framework */,
 				49D746421B5557900064DAB4 /* CoreMotion.framework */,
@@ -792,18 +805,19 @@
 				B71F5919188484E7003F4D28 /* Settings.png in Resources */,
 				49DD340C1B66B138009FE6F8 /* Images.xcassets in Resources */,
 				B7378978180762440076A88C /* Default@2x.png in Resources */,
+				49EA975C1B7E700B003B0456 /* MainSceneAudio2.mp3 in Resources */,
 				B71F5914188484E7003F4D28 /* iPad@2x.png in Resources */,
 				4964EBA11B684E4900BFBA7D /* GameScene.mp3 in Resources */,
 				B71F5913188484E7003F4D28 /* iPad.png in Resources */,
 				B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */,
 				B71F5916188484E7003F4D28 /* iPhone-old@2x.png in Resources */,
+				49EA97581B7DD200003B0456 /* CoinDrop.mp3 in Resources */,
 				B737893B180761570076A88C /* Published-iOS in Resources */,
 				4964EBAD1B6953E000BFBA7D /* MotionKit in Resources */,
 				B71F591A188484E7003F4D28 /* Settings@2x.png in Resources */,
 				B7378976180762440076A88C /* Default-Landscape~ipad.png in Resources */,
 				B71F5915188484E7003F4D28 /* iPhone-old.png in Resources */,
 				B71F5917188484E7003F4D28 /* iPhone.png in Resources */,
-				4964EBC41B79AEB400BFBA7D /* MainSceneAudio.mp3 in Resources */,
 				B7378975180762440076A88C /* Default-568h@2x.png in Resources */,
 				B71F5918188484E7003F4D28 /* iPhone@2x.png in Resources */,
 				B7378977180762440076A88C /* Default.png in Resources */,
@@ -882,11 +896,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4964EBA51B692BC200BFBA7D /* Shelf.swift in Sources */,
+				49EA975E1B7E8548003B0456 /* GameStateSingleton.swift in Sources */,
 				4964EBD31B7B0FA900BFBA7D /* LevelEndUI.swift in Sources */,
 				49DD33EA1B6007C0009FE6F8 /* RunnerGoblin.swift in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				4964EBBE1B7329AB00BFBA7D /* OgreEnemy.swift in Sources */,
 				49D746331B5433EF0064DAB4 /* Gameplay.swift in Sources */,
+				49EA97601B7E8B5F003B0456 /* iAdHandler.swift in Sources */,
 				49D7463B1B543B8E0064DAB4 /* WalkerGoblin.swift in Sources */,
 				4964EBB81B69550F00BFBA7D /* MotionKit.swift in Sources */,
 				7A046D7919E84ED5004C4763 /* MainScene.swift in Sources */,

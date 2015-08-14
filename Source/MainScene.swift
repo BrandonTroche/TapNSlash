@@ -13,17 +13,17 @@ class MainScene: CCNode {
     func didLoadFromCCB(){
         var audio = OALSimpleAudio.sharedInstance()
         
-        audio.playBg("MainSceneAudio.mp3", loop:true)
+        audio.playBg("MainSceneAudio2.mp3", loop:true)
         
     }
     
     
     func play() {
         
-    let scene = CCBReader.loadAsScene("LevelSelect")
+    let scene = CCBReader.loadAsScene("Gameplay")
     CCDirector.sharedDirector().presentScene(scene)
 
-    audio.stopBg()
+//    audio.stopBg()
         
     }
     

@@ -11,6 +11,9 @@ import CoreMotion
 
 class Gameplay: CCNode, CCPhysicsCollisionDelegate {
    
+
+
+    
     //physicsBody.sensor = true - collection
     
     
@@ -24,22 +27,28 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     weak var playerLevel: CCLabelTTF!
     weak var numCoins: CCLabelTTF!
     weak var coinCollectNode: CCNode!
+    weak var lvlEndUI: CCNode!
     
+    enum CurrentGameState{
+        case over, playing
+    }
+    
+    var gameState: CurrentGameState = .playing
     
     
 //    var lvlEndUI = CCBReader.load("LevelEndUI") as! LevelEndUI
     
-    
     var level = CCBReader.load("Levels/Level") as! Level
 
-    var lvlDictionary = LEVELDICTIONARY
+//    var lvlDictionary = LEVELDICTIONARY
     
     var motionManager = CMMotionManager()
-    var curLvlPlyr:NSInteger = 1
+//    var curLvlPlyr:NSInteger = 1
     
     var curNumCoins: Int = 0 {
         didSet{
             numCoins.string = "\(curNumCoins)"
+            GameStateSingleton.sharedInstance.score = curNumCoins
         }
     }
     
@@ -49,20 +58,20 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     
     func damageDone() -> Double {
         
-        return 0.25 + ((Double(curLvlPlyr) * 0.25)/4)
+        return 0.25 + ((1.0 * 0.25)/4.0)
         
     }
     
-    func expGain() -> Double{
-        
-        return 0.1146/Double(curLvlPlyr)
-        
-    }
+//    func expGain() -> Double{
+//        
+//        return 0.1146/Double(curLvlPlyr)
+//        
+//    }
     
     
     func didLoadFromCCB () {
         
-        gamePhysicsNode.debugDraw = true
+//        gamePhysicsNode.debugDraw = true
         
         let motionKit = MotionKit()
         
@@ -77,14 +86,13 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
 
             
             self.player.position.x = CGFloat(236.7 + (x*250))
-            //make the shake disappear
             
         }
         
         gamePhysicsNode.collisionDelegate = self
         userInteractionEnabled = true
         
-        experience.scaleX = 0.0
+//        experience.scaleX = 0.0
         
         coinCollectNode.physicsBody.sensor = true
 //        
@@ -98,17 +106,17 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
 //            backO:  lvlDictionary["LEVEL1"]!["backParameterOgre"]!,
 //            frontO: lvlDictionary["LEVEL1"]!["frontParameterOgre"]!)
         
-        var stringLevel = "LEVEL" + String(LEVEL)
-        
-        level.setVariables(lvlDictionary[stringLevel]!["goblinMax"]!,
-            backG:  lvlDictionary[stringLevel]!["backParameterGoblin"]!,
-            frontG: lvlDictionary[stringLevel]!["frontParameterGoblin"]!,
-            maxV:   lvlDictionary[stringLevel]!["vampMax"]!,
-            backV:  lvlDictionary[stringLevel]!["backParameterVamp"]!,
-            frontV: lvlDictionary[stringLevel]!["frontParameterVamp"]!,
-            maxO:   lvlDictionary[stringLevel]!["ogreMax"]!,
-            backO:  lvlDictionary[stringLevel]!["backParameterOgre"]!,
-            frontO: lvlDictionary[stringLevel]!["frontParameterOgre"]!)
+//        var stringLevel = "LEVEL" + String(LEVEL)
+//        
+//        level.setVariables(lvlDictionary[stringLevel]!["goblinMax"]!,
+//            backG:  lvlDictionary[stringLevel]!["backParameterGoblin"]!,
+//            frontG: lvlDictionary[stringLevel]!["frontParameterGoblin"]!,
+//            maxV:   lvlDictionary[stringLevel]!["vampMax"]!,
+//            backV:  lvlDictionary[stringLevel]!["backParameterVamp"]!,
+//            frontV: lvlDictionary[stringLevel]!["frontParameterVamp"]!,
+//            maxO:   lvlDictionary[stringLevel]!["ogreMax"]!,
+//            backO:  lvlDictionary[stringLevel]!["backParameterOgre"]!,
+//            frontO: lvlDictionary[stringLevel]!["frontParameterOgre"]!)
 
         
         level.delegate = self
@@ -120,12 +128,14 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         
     }
     
-    override func update(delta: CCTime) {
-        if level.checkLevelOver() && !isDone {
-            level.lvlEndUI.visible = true
-            isDone = true
-        }
-    }
+//    override func update(delta: CCTime) {
+//        
+//        if level.checkLevelOver() && !isDone {
+//            self.lvlEndUI.visible = true
+//            isDone = true
+//        }
+//        
+//    }
     
     
     func special() {
@@ -134,7 +144,16 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     
     
     func ccPhysicsCollisionBegin(pair: CCPhysicsCollisionPair!, coinCollector: CCNode!, coin: CCSprite!) -> ObjCBool {
-        coinUp(1)
+        if gameState == .over {
+            return true
+        } else {
+            coinUp(5)
+        }
+        
+        var audio = OALSimpleAudio.sharedInstance()
+        
+        audio.playEffect("CoinDrop.mp3")
+        
         coin.removeFromParent()
         return true
     }
@@ -160,21 +179,26 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
             enemyPositionY = enemy.position.y
             
             enemy.removeFromParent()
+            if gameState == .over {
+                return true
+            } else {
+                coinUp(15)
+            }
             
             if arc4random_uniform(10) == 1 {
                 
                 spawnCoin(enemyPositionX, Y:enemyPositionY)
                 
             }
-            experience.visible = true
-            experience.scaleX = clampf(experience.scaleX + Float(expGain()), 0, 0.573)
+//            experience.visible = true
+//            experience.scaleX = clampf(experience.scaleX + Float(expGain()), 0, 0.573)
 
             
-            if experience.scaleX > 0.5 {
-                experience.scaleX = 0.0
-                curLvlPlyr++
-                playerLevel.string = String(curLvlPlyr)
-            }
+//            if experience.scaleX > 0.5 {
+//                experience.scaleX = 0.0
+//                curLvlPlyr++
+//                playerLevel.string = String(curLvlPlyr)
+//            }
             
             
         }
@@ -197,6 +221,12 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
             enemyPositionY = enemyR.position.y
             
             enemyR.removeFromParent()
+            if gameState == .over {
+                return true
+            } else {
+                coinUp(10)
+            }
+        
             
             
             if arc4random_uniform(10) < 5 {
@@ -205,14 +235,14 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
                 
             }
             
-            experience.visible = true
-            experience.scaleX = clampf(experience.scaleX + Float(expGain()/5), 0, 0.573)
-            
-            if experience.scaleX > 0.5 {
-                experience.scaleX = 0.0
-                curLvlPlyr++
-                playerLevel.string = String(curLvlPlyr)
-            }
+//            experience.visible = true
+//            experience.scaleX = clampf(experience.scaleX + Float(expGain()/5), 0, 0.573)
+//            
+//            if experience.scaleX > 0.5 {
+//                experience.scaleX = 0.0
+//                curLvlPlyr++
+//                playerLevel.string = String(curLvlPlyr)
+//            }
             
             
         }
@@ -249,7 +279,8 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     
     
     func gameOver(){
-        level.lvlEndUI.visible = true
+        self.lvlEndUI.visible = true
+        gameState = .over
     }
     
     func donothing(){
@@ -288,7 +319,7 @@ extension Gameplay: SpawnProtocol{
         
         gamePhysicsNode.addChild(aGoblin)
         
-        let randNumberX = CGFloat(arc4random_uniform(100)) + CGFloat(100)
+        let randNumberX = CGFloat(arc4random_uniform(200)) + CGFloat(100)
         let randNumberY = CGFloat(arc4random_uniform(200)) + CGFloat(600)
         
         aGoblin.scaleX = 0.25

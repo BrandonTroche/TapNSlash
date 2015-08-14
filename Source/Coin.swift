@@ -11,7 +11,7 @@ import UIKit
 class Coin: CCSprite {
     
     var delegate: CoinDelegate?
-    var coinValue: Int = 1
+    var coinValue: Int = 5
 //    var collect = CCActionMoveTo(duration: 0.15, position)
 
    
