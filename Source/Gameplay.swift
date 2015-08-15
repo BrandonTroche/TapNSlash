@@ -28,13 +28,15 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     weak var numCoins: CCLabelTTF!
     weak var coinCollectNode: CCNode!
     weak var lvlEndUI: CCNode!
+    weak var specialButton: CCButton!
+    
     
     enum CurrentGameState{
         case over, playing
     }
     
     var gameState: CurrentGameState = .playing
-    
+    var temp: Int = 0
     
 //    var lvlEndUI = CCBReader.load("LevelEndUI") as! LevelEndUI
     
@@ -89,6 +91,8 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
             
         }
         
+        iAdHandler.sharedInstance.loadInterstitialAd()
+        
         gamePhysicsNode.collisionDelegate = self
         userInteractionEnabled = true
         
@@ -128,18 +132,25 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         
     }
     
-//    override func update(delta: CCTime) {
-//        
+    override func update(delta: CCTime) {
+        
 //        if level.checkLevelOver() && !isDone {
 //            self.lvlEndUI.visible = true
 //            isDone = true
 //        }
-//        
-//    }
+        
+        if temp == 10 {
+            temp = 0
+            specialButton.visible = true
+        }
+        
+        
+    }
     
     
     func special() {
         animationManager.runAnimationsForSequenceNamed("Special Attack")
+        specialButton.visible = false
     }
     
     
@@ -163,7 +174,10 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         var enemyPositionX: CGFloat
         var enemyPositionY: CGFloat
         var knockBack = CCActionMoveBy(duration: 0.15, position: CGPoint(x: 0, y: 60))
+        var colorChange = CCActionBlink(duration: 0.15, blinks: 2)
         
+        enemy.runAction(colorChange) ?? 0
+
         enemy.runAction(knockBack) ?? 0
         
         enemy.healthBar.scaleX -= Float(damageDone()) ?? 0
@@ -178,7 +192,17 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
             enemyPositionX = enemy.position.x
             enemyPositionY = enemy.position.y
             
+            let death = CCBReader.load("EnemyDeath") as! CCParticleSystem
+            
+            death.autoRemoveOnFinish = true
+            death.position.x = enemyPositionX
+            death.position.y = enemyPositionY
+            
+            enemy.parent.addChild(death)
+
+            
             enemy.removeFromParent()
+            temp++
             if gameState == .over {
                 return true
             } else {
@@ -220,6 +244,14 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
             enemyPositionX = enemyR.position.x
             enemyPositionY = enemyR.position.y
             
+            let death = CCBReader.load("VampDeath") as! CCParticleSystem
+            
+            death.autoRemoveOnFinish = true
+            death.position.x = enemyPositionX
+            death.position.y = enemyPositionY
+            
+            enemyR.parent.addChild(death)
+            
             enemyR.removeFromParent()
             if gameState == .over {
                 return true
@@ -256,8 +288,8 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         enemy.removeFromParent() ?? donothing()
         
         health.scaleX = clampf(health.scaleX - damageReceived, 0, 1)
-        
-        if health.scaleX == 0 {
+                
+        if health.scaleX <= 0.05 {
             gameOver()
         }
         
@@ -270,7 +302,7 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         
         health.scaleX = clampf(health.scaleX - damageReceived, 0, 1)
         
-        if health.scaleX == 0 {
+        if health.scaleX <= 0.05 {
             gameOver()
         }
         

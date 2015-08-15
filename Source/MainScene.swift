@@ -20,7 +20,7 @@ class MainScene: CCNode {
     
     func play() {
         
-    let scene = CCBReader.loadAsScene("Gameplay")
+    let scene = CCBReader.loadAsScene("Tutorial")
     CCDirector.sharedDirector().presentScene(scene)
 
 //    audio.stopBg()

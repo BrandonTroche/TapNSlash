@@ -11,21 +11,34 @@ import Foundation
 class LevelEndUI: CCNode {
     
     weak var curScore:CCLabelTTF!
+    var didShow: Bool = false
     
     override func update(delta: CCTime) {
         if self.visible == true{
             
+            
         curScore.string = String(GameStateSingleton.sharedInstance.score)
-         iAdHandler.sharedInstance.displayInterstitialAd()
+        
+            if !didShow{
+                summonAds()
+                didShow = true
+            }
             
         }
         
-        
         }
+    
+    func didLoadFromCCB(){
+        didShow = false
+    }
     
     func restart(){
         let scene = CCBReader.loadAsScene("Gameplay")
         CCDirector.sharedDirector().presentScene(scene)
+    }
+    
+    func summonAds(){
+        iAdHandler.sharedInstance.displayInterstitialAd()
     }
     
     override func onExit() {

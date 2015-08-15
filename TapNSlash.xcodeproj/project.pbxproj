@@ -28,6 +28,7 @@
 		49EA975E1B7E8548003B0456 /* GameStateSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EA975D1B7E8548003B0456 /* GameStateSingleton.swift */; };
 		49EA97601B7E8B5F003B0456 /* iAdHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EA975F1B7E8B5F003B0456 /* iAdHandler.swift */; };
 		49EA97621B7E8CAA003B0456 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49EA97611B7E8CAA003B0456 /* iAd.framework */; };
+		49EA976A1B7F1ED5003B0456 /* Tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EA97691B7F1ED5003B0456 /* Tutorial.swift */; };
 		5B121030197484FA004C1E1D /* TapNSlashActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B12102F197484FA004C1E1D /* TapNSlashActivity.m */; };
 		5B121038197487F2004C1E1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B737893E1807617C0076A88C /* AppDelegate.m */; };
 		7A046D7919E84ED5004C4763 /* MainScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A046D7519E84C36004C4763 /* MainScene.swift */; };
@@ -192,6 +193,7 @@
 		49EA975D1B7E8548003B0456 /* GameStateSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStateSingleton.swift; sourceTree = "<group>"; };
 		49EA975F1B7E8B5F003B0456 /* iAdHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iAdHandler.swift; sourceTree = "<group>"; };
 		49EA97611B7E8CAA003B0456 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		49EA97691B7F1ED5003B0456 /* Tutorial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tutorial.swift; path = Source/Tutorial.swift; sourceTree = "<group>"; };
 		5B12100919748273004C1E1D /* libEGL.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEGL.so; path = /usr/lib/armv7a/libEGL.so; sourceTree = SDKROOT; };
 		5B12100F197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 		5B121011197483EE004C1E1D /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
@@ -501,6 +503,7 @@
 				4964EBA41B692BC200BFBA7D /* Shelf.swift */,
 				4964EBD21B7B0FA900BFBA7D /* LevelEndUI.swift */,
 				4964EBB91B70943C00BFBA7D /* Level.swift */,
+				49EA97691B7F1ED5003B0456 /* Tutorial.swift */,
 				49D746381B5434170064DAB4 /* Player.swift */,
 				49D7463A1B543B8E0064DAB4 /* WalkerGoblin.swift */,
 				4964EBBD1B7329AB00BFBA7D /* OgreEnemy.swift */,
@@ -896,6 +899,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4964EBA51B692BC200BFBA7D /* Shelf.swift in Sources */,
+				49EA976A1B7F1ED5003B0456 /* Tutorial.swift in Sources */,
 				49EA975E1B7E8548003B0456 /* GameStateSingleton.swift in Sources */,
 				4964EBD31B7B0FA900BFBA7D /* LevelEndUI.swift in Sources */,
 				49DD33EA1B6007C0009FE6F8 /* RunnerGoblin.swift in Sources */,

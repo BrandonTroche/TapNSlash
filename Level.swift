@@ -43,7 +43,7 @@ class Level: CCNode {
         
 //        if arc4random_uniform(UInt32(backParameterGob)) < UInt32(frontParameterGob) && gobCount != maxGob {
         
-        if arc4random_uniform(250) < 25 {
+        if arc4random_uniform(500) < 10 {
             delegate.spawnGoblin()
 //            gobCount++
         }
@@ -54,7 +54,7 @@ class Level: CCNode {
     
 //        if arc4random_uniform(UInt32(backParameterVamp)) < UInt32(frontParameterVamp) && qckCount != maxVamp {
         
-        if arc4random_uniform(250) < 10 {
+        if arc4random_uniform(600) < 8 {
             delegate.spawnQuickie()
 //            qckCount++
         }
