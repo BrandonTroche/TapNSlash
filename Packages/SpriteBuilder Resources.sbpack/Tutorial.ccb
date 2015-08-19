@@ -1846,7 +1846,7 @@ left and right to move!</string>
 						<key>value</key>
 						<array>
 							<real>34.719951629638672</real>
-							<real>422.43960571289062</real>
+							<real>583.64447021484375</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2019,8 +2019,6 @@ left and right to move!</string>
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>
@@ -2489,7 +2487,7 @@ left and right to move!</string>
 				<array>
 					<dict>
 						<key>baseValue</key>
-						<integer>0</integer>
+						<false/>
 						<key>name</key>
 						<string>visible</string>
 						<key>type</key>
@@ -3509,7 +3507,7 @@ coins to collect them!</string>
 						<string>String</string>
 						<key>value</key>
 						<array>
-							<string>GOOD LUCK!</string>
+							<string>Tap to Start!</string>
 							<false/>
 						</array>
 					</dict>
@@ -3851,14 +3849,6 @@ coins to collect them!</string>
 							<string></string>
 							<string>ccbResources/ccbButtonNormal.png</string>
 						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>backgroundOpacity|Normal</string>
-						<key>type</key>
-						<string>Float</string>
-						<key>value</key>
-						<real>0.10000000149011612</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -4217,7 +4207,7 @@ coins to collect them!</string>
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>1</real>
+			<real>0.0</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

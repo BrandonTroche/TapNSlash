@@ -41,6 +41,11 @@ class LevelEndUI: CCNode {
         iAdHandler.sharedInstance.displayInterstitialAd()
     }
     
+    func menu(){
+        let scene = CCBReader.loadAsScene("MainScene")
+        CCDirector.sharedDirector().presentScene(scene)
+    }
+    
     override func onExit() {
         
 //        iAdHandler.sharedInstance.setBannerPosition(bannerPosition: .Top)

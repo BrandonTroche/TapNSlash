@@ -29,6 +29,7 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     weak var coinCollectNode: CCNode!
     weak var lvlEndUI: CCNode!
     weak var specialButton: CCButton!
+
     
     
     enum CurrentGameState{
