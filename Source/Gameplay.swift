@@ -174,7 +174,7 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         
         var enemyPositionX: CGFloat
         var enemyPositionY: CGFloat
-        var knockBack = CCActionMoveBy(duration: 0.15, position: CGPoint(x: 0, y: 60))
+        var knockBack = CCActionMoveBy(duration: 0.15, position: CGPoint(x: 0, y: 100))
         var colorChange = CCActionBlink(duration: 0.15, blinks: 2)
         
         enemy.runAction(colorChange) ?? 0
@@ -291,7 +291,9 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         health.scaleX = clampf(health.scaleX - damageReceived, 0, 1)
                 
         if health.scaleX <= 0.05 {
-            gameOver()
+            if gameState != .over{
+                gameOver()
+            }
         }
         
         return true
@@ -304,7 +306,9 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
         health.scaleX = clampf(health.scaleX - damageReceived, 0, 1)
         
         if health.scaleX <= 0.05 {
-            gameOver()
+            if gameState != .over{
+                gameOver()
+            }
         }
         
         return true
@@ -312,7 +316,8 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     
     
     func gameOver(){
-        self.lvlEndUI.visible = true
+//        self.lvlEndUI.visible = true
+        self.animationManager.runAnimationsForSequenceNamed("End")
         gameState = .over
     }
     

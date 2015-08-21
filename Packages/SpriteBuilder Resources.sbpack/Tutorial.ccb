@@ -16,7 +16,7 @@
 	<key>currentResolution</key>
 	<integer>0</integer>
 	<key>currentSequenceId</key>
-	<integer>1</integer>
+	<integer>3</integer>
 	<key>docDimensionsType</key>
 	<integer>0</integer>
 	<key>fileType</key>
@@ -1525,6 +1525,14 @@ left and right to move!</string>
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>backgroundOpacity|Normal</string>
+						<key>type</key>
+						<string>Float</string>
+						<key>value</key>
+						<real>0.0</real>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>backgroundSpriteFrame|Highlighted</string>
 						<key>type</key>
 						<string>SpriteFrame</string>
@@ -1533,6 +1541,14 @@ left and right to move!</string>
 							<string></string>
 							<string>ccbResources/ccbButtonHighlighted.png</string>
 						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>backgroundOpacity|Highlighted</string>
+						<key>type</key>
+						<string>Float</string>
+						<key>value</key>
+						<real>0.0</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1823,7 +1839,7 @@ left and right to move!</string>
 						<key>type</key>
 						<string>Check</string>
 						<key>value</key>
-						<true/>
+						<false/>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1845,8 +1861,8 @@ left and right to move!</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>34.719951629638672</real>
-							<real>583.64447021484375</real>
+							<real>29.568000793457031</real>
+							<real>422.43960571289062</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2195,6 +2211,14 @@ left and right to move!</string>
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>backgroundOpacity|Normal</string>
+						<key>type</key>
+						<string>Float</string>
+						<key>value</key>
+						<real>0.0</real>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>backgroundSpriteFrame|Highlighted</string>
 						<key>type</key>
 						<string>SpriteFrame</string>
@@ -2203,6 +2227,14 @@ left and right to move!</string>
 							<string></string>
 							<string>ccbResources/ccbButtonHighlighted.png</string>
 						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>backgroundOpacity|Highlighted</string>
+						<key>type</key>
+						<string>Float</string>
+						<key>value</key>
+						<real>0.0</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -3155,6 +3187,14 @@ coins to collect them!</string>
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>backgroundOpacity|Normal</string>
+						<key>type</key>
+						<string>Float</string>
+						<key>value</key>
+						<real>0.0</real>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>backgroundSpriteFrame|Highlighted</string>
 						<key>type</key>
 						<string>SpriteFrame</string>
@@ -3163,6 +3203,14 @@ coins to collect them!</string>
 							<string></string>
 							<string>ccbResources/ccbButtonHighlighted.png</string>
 						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>backgroundOpacity|Highlighted</string>
+						<key>type</key>
+						<string>Float</string>
+						<key>value</key>
+						<real>0.0</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -3407,7 +3455,7 @@ coins to collect them!</string>
 						<key>type</key>
 						<string>Check</string>
 						<key>value</key>
-						<false/>
+						<true/>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -3524,6 +3572,14 @@ coins to collect them!</string>
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>backgroundOpacity|Normal</string>
+						<key>type</key>
+						<string>Float</string>
+						<key>value</key>
+						<real>0.0</real>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>backgroundSpriteFrame|Highlighted</string>
 						<key>type</key>
 						<string>SpriteFrame</string>
@@ -3532,6 +3588,14 @@ coins to collect them!</string>
 							<string></string>
 							<string>ccbResources/ccbButtonHighlighted.png</string>
 						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>backgroundOpacity|Highlighted</string>
+						<key>type</key>
+						<string>Float</string>
+						<key>value</key>
+						<real>0.0</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -3852,6 +3916,14 @@ coins to collect them!</string>
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>backgroundOpacity|Normal</string>
+						<key>type</key>
+						<string>Float</string>
+						<key>value</key>
+						<real>0.30000001192092896</real>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>backgroundSpriteFrame|Highlighted</string>
 						<key>type</key>
 						<string>SpriteFrame</string>
@@ -3860,6 +3932,14 @@ coins to collect them!</string>
 							<string></string>
 							<string>ccbResources/ccbButtonHighlighted.png</string>
 						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>backgroundOpacity|Highlighted</string>
+						<key>type</key>
+						<string>Float</string>
+						<key>value</key>
+						<real>0.0</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -4058,6 +4138,8 @@ coins to collect them!</string>
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
@@ -4169,9 +4251,9 @@ coins to collect them!</string>
 			<key>name</key>
 			<string>TiltToMove</string>
 			<key>offset</key>
-			<real>0.0</real>
+			<real>2.6328125</real>
 			<key>position</key>
-			<real>0.0</real>
+			<real>6</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
@@ -4205,9 +4287,9 @@ coins to collect them!</string>
 			<key>name</key>
 			<string>TapToSlash</string>
 			<key>offset</key>
-			<real>0.0</real>
+			<real>0.66614580154418945</real>
 			<key>position</key>
-			<real>0.0</real>
+			<real>4.0333333015441895</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
