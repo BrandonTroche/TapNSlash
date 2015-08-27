@@ -1227,9 +1227,10 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = TapNSlash;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "77cdd1e7-95e8-488f-b222-63c856f6d243";
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1267,8 +1268,9 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = TapNSlash;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "77cdd1e7-95e8-488f-b222-63c856f6d243";
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
