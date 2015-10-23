@@ -2024,13 +2024,15 @@
 								<string>ScaleLock</string>
 								<key>value</key>
 								<array>
-									<real>1</real>
-									<real>1</real>
+									<real>4.998253345489502</real>
+									<real>4.3683476448059082</real>
 									<false/>
 									<integer>0</integer>
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>

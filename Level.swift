@@ -13,101 +13,59 @@ class Level: CCNode {
 
     var delegate: SpawnProtocol!
 
-//    var gobCount:Int = 0
-//    var qckCount:Int = 0
-//    var ogreCount:Int = 0
-//    
-//    var maxGob = 0
-//    var backParameterGob = 0
-//    var frontParameterGob = 0
-//    
-//    var maxVamp = 0
-//    var backParameterVamp = 0
-//    var frontParameterVamp = 0
-//    
-//    var maxOgre = 0
-//    var backParameterOgre = 0
-//    var frontParameterOgre = 0
-//    
-//    
-//    
+ 
     enum GameState{
         case over, playing
     }
 
     var gameState: GameState = .playing
+    var gobCount:Int = 0
+    var qckCount:Int = 0
 
     
     override func update(delta: CCTime) {
         
         
-//        if arc4random_uniform(UInt32(backParameterGob)) < UInt32(frontParameterGob) && gobCount != maxGob {
-        
-        if arc4random_uniform(500) < 10 {
+        if ((arc4random_uniform(500) < 10) && gobCount < 12) {
             delegate.spawnGoblin()
-//            gobCount++
+            gobCount++
         }
-        
-        
-//        }
-        
     
-//        if arc4random_uniform(UInt32(backParameterVamp)) < UInt32(frontParameterVamp) && qckCount != maxVamp {
         
-        if arc4random_uniform(600) < 8 {
+        if ((arc4random_uniform(600) < 8) && qckCount < 12) {
             delegate.spawnQuickie()
-//            qckCount++
+            qckCount++
         }
         
-//        }
-        
-//        if arc4random_uniform(UInt32(backParameterOgre)) < UInt32(frontParameterOgre) && ogreCount != maxOgre {
-        
-//            delegate.spawnOgre()
-//            ogreCount++
-        
-//        }
-        
-//            levelFinished()
+
         
             checkLevelOver()
                 
                 
     }
-//
-//    func setVariables(var maxG:Int, var backG: Int, var frontG: Int,
-//                      var maxV:Int, var backV: Int, var frontV: Int,
-//                      var maxO:Int, var backO: Int, var frontO: Int) {
-//        
-//        maxGob = maxG
-//        backParameterGob = backG
-//        frontParameterGob = frontG
-//        
-//        maxVamp = maxV
-//        backParameterVamp = backV
-//        frontParameterVamp = frontV
-//        
-//        maxOgre = maxO
-//        backParameterOgre = backO
-//        frontParameterOgre = frontO
-//        
-//    }
-//    
+    
+    func gob_Check()->Int{
+        return gobCount
+    }
+    
+    func qck_Check()->Int{
+        return qckCount
+    }
+    
+    func gob_Died(var died:Int){
+        gobCount -= died
+    }
+    
+    func qck_Died(var died:Int){
+        qckCount -= died
+    }
+
     func checkLevelOver() -> Bool {
         if gameState == .over {
             return true
         }
         return false
     }
-//
-//    func levelFinished() -> Bool {
-//        if gobCount == maxGob && qckCount == maxVamp && ogreCount == maxOgre {
-//            gameState = .over
-//            return true
-//        }
-//        return false
-//    }
-//
-//    
+ 
 }
 

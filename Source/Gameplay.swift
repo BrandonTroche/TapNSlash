@@ -74,7 +74,7 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     
     func didLoadFromCCB () {
         
-//        gamePhysicsNode.debugDraw = true
+        gamePhysicsNode.debugDraw = true
         
         let motionKit = MotionKit()
         
@@ -150,8 +150,10 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
     
     
     func special() {
+        if(gameState != .over){
         animationManager.runAnimationsForSequenceNamed("Special Attack")
         specialButton.visible = false
+        }
     }
     
     
@@ -204,6 +206,7 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
             
             enemy.removeFromParent()
             temp++
+            level.gob_Died(1)
             if gameState == .over {
                 return true
             } else {
@@ -254,6 +257,8 @@ class Gameplay: CCNode, CCPhysicsCollisionDelegate {
             enemyR.parent.addChild(death)
             
             enemyR.removeFromParent()
+            temp++
+            level.qck_Died(1)
             if gameState == .over {
                 return true
             } else {
