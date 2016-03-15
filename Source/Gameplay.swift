@@ -11,8 +11,6 @@ import CoreMotion
 
 class Gameplay: CCNode, CCPhysicsCollisionDelegate {
    
-
-
     
     //physicsBody.sensor = true - collection
     
