@@ -12,10 +12,10 @@ import CoreMotion
 class Gameplay: CCNode, CCPhysicsCollisionDelegate {
    
     
-    //physicsBody.sensor = true - collection
+    // physicsBody.sensor = true - collection
     
     
-    /*Load in enemies between 60% and 100%*/
+    /* Load in enemies between 60% and 100% */
     
     weak var currentLevel: CCNode!
     weak var player: Player!
